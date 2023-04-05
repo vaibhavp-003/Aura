@@ -3,6 +3,8 @@
 using namespace std;
 using namespace filesystem;
 
+// File enumeration program
+
 namespace fs = std::filesystem;
 
 int main() {
@@ -37,5 +39,6 @@ int main() {
         }
     }
 
+	// returning 0 value 
     return 0;
 }
