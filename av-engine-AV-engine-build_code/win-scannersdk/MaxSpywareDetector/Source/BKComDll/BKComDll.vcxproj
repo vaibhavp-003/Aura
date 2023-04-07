@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{91A1D3F8-B855-4793-99E6-91099C728A46}</ProjectGuid>
+    <Keyword>MFCDLLProj</Keyword>
+    <RootNamespace>BKComDll</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>AuBKComDll</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\BKComDll.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_WINDOWS;_DEBUG;_USRDLL;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\Protection;..\..\..\Max Secure\Source\Common\Communication;..\..\..\Max Secure\Source\Common\BalBST;..\..\..\Max Secure\Source\Common\Database;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\Max Secure\Source\Common\OptionTab;..\..\..\Max Secure\Source\Common\PESignature;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\Max Secure\Source\Common\FileIntegrity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>.\BKComDll.def</ModuleDefinitionFile>
+      <AdditionalDependencies>Rpcrt4.lib</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Imagehlp.lib;..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\Protection;..\..\..\Max Secure\Source\Common\Communication;..\..\..\Max Secure\Source\Common\BalBST;..\..\..\Max Secure\Source\Common\Database;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\Max Secure\Source\Common\OptionTab;..\..\..\Max Secure\Source\Common\PESignature;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\Max Secure\Source\Common\FileIntegrity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\BKComDll.def</ModuleDefinitionFile>
+      <AdditionalDependencies>Imagehlp.lib;..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;_USRDLL;_CRT_SECURE_NO_WARNINGS;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>.\;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\Protection;..\..\..\Max Secure\Source\Common\Communication;..\..\..\Max Secure\Source\Common\BalBST;..\..\..\Max Secure\Source\Common\Database;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\Max Secure\Source\Common\OptionTab;..\..\..\Max Secure\Source\Common\PESignature;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\Max Secure\Source\Common\FileIntegrity;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\BKComDll.def</ModuleDefinitionFile>
+      <AdditionalDependencies>Imagehlp.lib;..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\CheckDuplicates.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\RemoveDB.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2UA.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\SUUU2Info.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\ThreatInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2Info.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2S.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2SA.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\UU2Info.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\UUU2Info.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\CriticalSection.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicatorServer.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxNamedPipeListener.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxProcessReg.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\ThreadSync.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\ExcludeDb.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\MaxDSrvWrapper.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\SDScannerDB.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\FileIntegrity\CommonFileIntegrityCheck.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\OptionTab\OptionTabFunctions.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\FileSig.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\PEFileSig.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\Signature.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Protection\MaxProtectionMgr.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DBPathExpander.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\EnumProcess.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\Registry.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\USBDbOperations.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\USBInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\ExportLog.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\MaxDeviceInfoManager.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\MaxWhiteListMgr.cpp" />
+    <ClCompile Include="AdvanceSettings.cpp" />
+    <ClCompile Include="BKComDll.cpp" />
+    <ClCompile Include="CustomSettings.cpp" />
+    <ClCompile Include="ExcludeDlg.cpp" />
+    <ClCompile Include="ExcludeRecover.cpp" />
+    <ClCompile Include="ExtensionList.cpp" />
+    <ClCompile Include="FullScanReport.cpp" />
+    <ClCompile Include="MaxReportQMGR.cpp" />
+    <ClCompile Include="MaxWhiteListDlg.cpp" />
+    <ClCompile Include="PasswordManager.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PipeCom.cpp" />
+    <ClCompile Include="ProductInformation.cpp" />
+    <ClCompile Include="ProxySetting.cpp" />
+    <ClCompile Include="RecoverRemovedSpywares.cpp" />
+    <ClCompile Include="RegAuth.cpp" />
+    <ClCompile Include="RegistrationStatus.cpp" />
+    <ClCompile Include="ScanGraph.cpp" />
+    <ClCompile Include="ScanByName.cpp" />
+    <ClCompile Include="ScanProcess.cpp" />
+    <ClCompile Include="SchedulerMgr.cpp" />
+    <ClCompile Include="USBDriveList.cpp" />
+    <ClCompile Include="USBManager.cpp" />
+    <ClCompile Include="USBScan.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BKComDll.def" />
+    <None Include="res\BKComDll.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\CheckDuplicates.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\RemoveDB.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2UA.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\SUUU2Info.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\ThreatInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2Info.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2S.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2SA.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\UU2Info.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\UUU2Info.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\CriticalSection.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicatorServer.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxNamedPipeListener.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxPipes.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxProcessReg.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\ThreadSync.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\ExcludeDb.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\MaxDSrvWrapper.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\SDScannerDB.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\FileIntegrity\CommonFileIntegrityCheck.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\OptionTab\OptionTabFunctions.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\PESignature\FileSig.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\PESignature\PEConstants.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\PESignature\PEFileSig.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Protection\MaxProtectionMgr.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DBPathExpander.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Enumprocess.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Registry.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\USBDbOperations.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\USBInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ExportLog.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\MaxDeviceInfoManager.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\MaxWhiteListMgr.h" />
+    <ClInclude Include="AdvanceSettings.h" />
+    <ClInclude Include="BKComDll.h" />
+    <ClInclude Include="CustomSettings.h" />
+    <ClInclude Include="ExcludeDlg.h" />
+    <ClInclude Include="ExcludeRecover.h" />
+    <ClInclude Include="ExtensionList.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="FullScanReport.h" />
+    <ClInclude Include="MaxReportQMGR.h" />
+    <ClInclude Include="MaxWhiteListDlg.h" />
+    <ClInclude Include="PasswordManager.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="PipeCom.h" />
+    <ClInclude Include="ProductInformation.h" />
+    <ClInclude Include="ProxySetting.h" />
+    <ClInclude Include="RecoverRemovedSpywares.h" />
+    <ClInclude Include="RegAuth.h" />
+    <ClInclude Include="RegistrationStatus.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ScanByName.h" />
+    <ClInclude Include="ScanGraph.h" />
+    <ClInclude Include="ScanProcess.h" />
+    <ClInclude Include="SchedulerMgr.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="USBDriveList.h" />
+    <ClInclude Include="USBManager.h" />
+    <ClInclude Include="USBScan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BKComDll.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

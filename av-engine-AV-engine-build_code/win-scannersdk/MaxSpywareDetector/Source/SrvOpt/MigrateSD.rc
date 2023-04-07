@@ -1,0 +1,237 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\MigrateSD.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MainFrame.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MIGRATESD_DIALOG DIALOGEX 0, 0, 353, 223
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         141,IDC_STATIC_SELECT_DRIVE_TITLE,"Static",SS_BITMAP,0,0,23,18
+    CONTROL         142,IDC_STATIC_TITLE_EXTEND,"Static",SS_BITMAP,34,0,3,18
+    CONTROL         143,IDC_STATIC_TITLEBAR_RIGHT_CORNER,"Static",SS_BITMAP,349,0,3,18
+    CONTROL         160,IDC_STATIC_CORNER_LEFT_BOTTOM,"Static",SS_BITMAP,0,216,8,7
+    CONTROL         159,IDC_STATIC_CORNER_RIGHT_BOTTOM,"Static",SS_BITMAP,345,216,8,7
+    CONTROL         IDC_CURSOR_HAND,IDC_STATIC_SECOND_TOP_LEFT_CORNER,"Static",SS_BITMAP,13,27,7,7
+    CONTROL         149,IDC_STATIC_SECOND_TOP_RIGHT_CORNER,"Static",SS_BITMAP,330,27,7,7
+    CONTROL         146,IDC_STATIC_SECOND_BOTTOM_LEFT_CORNER,"Static",SS_BITMAP,13,203,7,7
+    CONTROL         147,IDC_STATIC_SECOND_BOTTOM_RIGHT_CORNER,"Static",SS_BITMAP,330,203,7,7
+    LTEXT           "Feel more Secure",IDC_STATIC_MSG_TITLE,26,38,306,16
+    LTEXT           "Features added to provide you a better experience.",IDC_STATIC_MSG_SUB_TITLE,78,64,231,10
+    LTEXT           "1. Faster and Powerful Scan.",IDC_STATIC_MSG_1,78,83,231,9
+    LTEXT           "2. Multilanguage Support for German, French, Spanish, Russian and Japanese.",IDC_STATIC_MSG_2,78,99,231,17
+    LTEXT           "3. Scan statistics of total count of different threats found on your PC.",IDC_STATIC_MSG_3,78,123,231,9
+    LTEXT           "4. Threat Community, to proactively help you detect new potential threats on your PC. I would like to participate.",IDC_STATIC_MSG_4,78,140,231,17
+    LTEXT           "Privacy Policy",IDC_PRIVACY_POLICY,228,149,45,9
+    CONTROL         "Yes",IDC_THREAT_YES,"Button",BS_AUTORADIOBUTTON | WS_GROUP,85,163,26,9
+    CONTROL         "No",IDC_THREAT_NO,"Button",BS_AUTORADIOBUTTON,121,163,26,9
+    CONTROL         "",IDC_MIGRATE_PROGRESS,"msctls_progress32",PBS_SMOOTH | WS_BORDER,78,182,174,10
+    PUSHBUTTON      "",IDC_CONTINUE_BUTTON,256,179,50,15
+    LTEXT           "",IDC_STATIC_TITLE,27,2,133,10
+    CONTROL         "",IDC_MIGRATE_ANIMATION,"Static",SS_BLACKRECT,21,50,26,34
+    CONTROL         "",IDC_MIGRATE_STATIC,"Static",SS_BLACKRECT,21,50,26,34
+    PUSHBUTTON      "Cancel",IDCANCEL,333,55,15,12,NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,0
+ PRODUCTVERSION 19,0,2,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Component used while uninstalling the product."
+            VALUE "CompanyName", "Aura"
+            VALUE "FileDescription", "ServiceOpt"
+            VALUE "FileVersion", "1, 0, 1, 0"
+            VALUE "InternalName", "SrvOpt.exe"
+            VALUE "LegalCopyright", "(c) Aura.  All rights reserved."
+            VALUE "LegalTrademarks", "Aura"
+            VALUE "OriginalFilename", "SrvOpt.exe"
+            VALUE "ProductName", "ServiceOpt"
+            VALUE "ProductVersion", "19, 0, 2, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MIGRATESD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SMALLMASK           BITMAP                  "res\\small_mask.bmp"
+
+IDB_BTN_SMALL           BITMAP                  "res\\btn_sm.bmp"
+
+IDB_BTN_SMALL_FS        BITMAP                  "res\\btn_sm_fs.bmp"
+
+IDB_BTN_SMALL_MO        BITMAP                  "res\\btn_sm_mo.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_MIGRATE_ANIMATION   GIF                     "res\\migrate-animation.gif"
+
+IDR_MIGRATE_STATIC      GIF                     "res\\migrate-static.gif"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_HAND         CURSOR                  "res\\H_POINT.CUR"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_MIGRATESD_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\MigrateSD.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

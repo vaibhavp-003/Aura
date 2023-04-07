@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{989FD114-1B67-4B89-989B-99DF799FD307}</ProjectGuid>
+    <RootNamespace>MaxAVPMScan</RootNamespace>
+    <SccProjectName>"$/", AAAAAAAA</SccProjectName>
+    <SccLocalPath>..\..\..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <ProjectName>AuAVPMScan</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.32002.118</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\System\;..\MaxAVDBScan\;..\MaxEmulator\;..\..\..\Max Secure\Source\Common\MaxScanner;..\Common\;..\..\..\NIH\Source\UnPackers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MAXAVPMSCAN_EXPORTS;NO_EXCEPTION_LOG;W32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;$(OutDir)Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\System\;..\MaxAVDBScan\;..\..\..\Max Secure\Source\Common\MaxScanner;..\Common\;..\..\..\NIH\Source\UnPackers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;MAXAVPMSCAN_EXPORTS;NO_EXCEPTION_LOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;$(OutDir)Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware />
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\System\;..\MaxAVDBScan\;..\MaxEmulator\;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common\MaxScanner;..\Common\;..\..\..\NIH\Source\UnPackers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MAXAVPMSCAN_EXPORTS;NO_EXCEPTION_LOG;W32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wintrust.lib;crypt32.lib;Imagehlp.lib;$(OutDir)Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common\System\;..\MaxAVDBScan\;..\..\..\Max Secure\Source\Common\MaxScanner;..\Common\;..\..\..\NIH\Source\UnPackers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;MAXAVPMSCAN_EXPORTS;NO_EXCEPTION_LOG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>wintrust.lib;crypt32.lib;Imagehlp.lib;$(OutDir)Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2U.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\Emulate.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp" />
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\depacks.c" />
+    <ClCompile Include="..\Common\MaxBMAlgo.cpp" />
+    <ClCompile Include="..\Common\TimeOutMgr.cpp" />
+    <ClCompile Include="..\MaxAVDBScan\SecSigDB.cpp" />
+    <ClCompile Include="..\MaxAVDBScan\TreeManager.cpp" />
+    <ClCompile Include="..\MaxAVDBScan\TreeMemManager.cpp" />
+    <ClCompile Include="asmserv.cpp" />
+    <ClCompile Include="CRTCheck.cpp" />
+    <ClCompile Include="MaxAVPMScan.cpp" />
+    <ClCompile Include="MaxDisassem.cpp" />
+    <ClCompile Include="NonRepairable.cpp" />
+    <ClCompile Include="Packers.cpp" />
+    <ClCompile Include="PolyAfgan.cpp" />
+    <ClCompile Include="PolyAlcaul.cpp" />
+    <ClCompile Include="PolyAlma.cpp" />
+    <ClCompile Include="PolyAlman.cpp" />
+    <ClCompile Include="PolyAndras.cpp" />
+    <ClCompile Include="PolyAOC.cpp" />
+    <ClCompile Include="PolyAris.cpp" />
+    <ClCompile Include="PolyBase.cpp" />
+    <ClCompile Include="PolyBluwin.cpp" />
+    <ClCompile Include="PolyBolzano.cpp" />
+    <ClCompile Include="PolyCensor.cpp" />
+    <ClCompile Include="PolyChamp.cpp" />
+    <ClCompile Include="PolyChiton.cpp" />
+    <ClCompile Include="PolyCrunk.cpp" />
+    <ClCompile Include="PolyCTX.cpp" />
+    <ClCompile Include="PolyDelikon.cpp" />
+    <ClCompile Include="PolyDetnat.cpp" />
+    <ClCompile Include="PolyDevir.cpp" />
+    <ClCompile Include="PolyDion.cpp" />
+    <ClCompile Include="PolyDoser.cpp" />
+    <ClCompile Include="PolyDriller.cpp" />
+    <ClCompile Include="PolyDundun.cpp" />
+    <ClCompile Include="PolyElkern.cpp" />
+    <ClCompile Include="PolyETap.cpp" />
+    <ClCompile Include="PolyExpiro.cpp" />
+    <ClCompile Include="PolyExpiro64.cpp" />
+    <ClCompile Include="PolyFearso.cpp" />
+    <ClCompile Include="PolyFlyStdio.Cpp" />
+    <ClCompile Include="PolyFosforo.cpp" />
+    <ClCompile Include="PolyHatred.cpp" />
+    <ClCompile Include="PolyHeuristics.cpp" />
+    <ClCompile Include="PolyHezhi.cpp" />
+    <ClCompile Include="PolyInduc.cpp" />
+    <ClCompile Include="PolyInrar.cpp" />
+    <ClCompile Include="PolyJolla.cpp" />
+    <ClCompile Include="PolyJunkComp.cpp" />
+    <ClCompile Include="PolyLAMT.cpp" />
+    <ClCompile Include="PolyLevi.cpp" />
+    <ClCompile Include="PolyMabezat.cpp" />
+    <ClCompile Include="PolyMinit.cpp" />
+    <ClCompile Include="PolymorphicVirus.cpp" />
+    <ClCompile Include="PolyNimnul.cpp" />
+    <ClCompile Include="PolyParite.cpp" />
+    <ClCompile Include="PolyPayBack.cpp" />
+    <ClCompile Include="PolyPioneer.cpp" />
+    <ClCompile Include="PolyPolip.cpp" />
+    <ClCompile Include="PolyPolyK.cpp" />
+    <ClCompile Include="PolyRainSong.cpp" />
+    <ClCompile Include="PolyRansom.cpp" />
+    <ClCompile Include="PolySality.cpp" />
+    <ClCompile Include="PolySfcer.cpp" />
+    <ClCompile Include="PolySilcer.cpp" />
+    <ClCompile Include="PolyTDSS.cpp" />
+    <ClCompile Include="PolyThorin.cpp" />
+    <ClCompile Include="PolyTrojanPatched.cpp" />
+    <ClCompile Include="PolyTrojans64.cpp" />
+    <ClCompile Include="PolyTvido.cpp" />
+    <ClCompile Include="PolyVampiro.cpp" />
+    <ClCompile Include="PolyVirut.cpp" />
+    <ClCompile Include="PolyVulcas.cpp" />
+    <ClCompile Include="PolyXorer.cpp" />
+    <ClCompile Include="PolyXpaj.cpp" />
+    <ClCompile Include="PolyXpajA.cpp" />
+    <ClCompile Include="PolyZMorph.cpp" />
+    <ClCompile Include="PolyZperm.cpp" />
+    <ClCompile Include="PolyZperMorph.cpp" />
+    <ClCompile Include="SemiPoly.cpp" />
+    <ClCompile Include="SemiPolyDBScn.cpp" />
+    <ClCompile Include="SemiPolyTrojans.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Trojans.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2U.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\Emulate.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\Resmd5.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\depacks.h" />
+    <ClInclude Include="..\Common\MaxBMAlgo.h" />
+    <ClInclude Include="..\Common\TimeOutMgr.h" />
+    <ClInclude Include="..\MaxAVDBScan\SecSigDB.h" />
+    <ClInclude Include="..\MaxAVDBScan\TreeManager.h" />
+    <ClInclude Include="..\MaxAVDBScan\TreeMemManager.h" />
+    <ClInclude Include="CRTCheck.h" />
+    <ClInclude Include="disasm.h" />
+    <ClInclude Include="MaxAVPMScan.h" />
+    <ClInclude Include="MaxDisassem.h" />
+    <ClInclude Include="NonRepairable.h" />
+    <ClInclude Include="Packers.h" />
+    <ClInclude Include="PolyAfgan.h" />
+    <ClInclude Include="PolyAlcaul.h" />
+    <ClInclude Include="PolyAlma.h" />
+    <ClInclude Include="PolyAlman.h" />
+    <ClInclude Include="PolyAndras.h" />
+    <ClInclude Include="PolyAOC.h" />
+    <ClInclude Include="PolyAris.h" />
+    <ClInclude Include="PolyBase.h" />
+    <ClInclude Include="PolyBluwin.h" />
+    <ClInclude Include="PolyBolzano.h" />
+    <ClInclude Include="PolyCensor.h" />
+    <ClInclude Include="PolyChamp.h" />
+    <ClInclude Include="PolyChiton.h" />
+    <ClInclude Include="PolyCrunk.h" />
+    <ClInclude Include="PolyCTX.h" />
+    <ClInclude Include="PolyDelikon.h" />
+    <ClInclude Include="PolyDetnat.h" />
+    <ClInclude Include="PolyDevir.h" />
+    <ClInclude Include="PolyDion.h" />
+    <ClInclude Include="PolyDoser.h" />
+    <ClInclude Include="PolyDriller.h" />
+    <ClInclude Include="PolyDundun.h" />
+    <ClInclude Include="PolyElkern.h" />
+    <ClInclude Include="PolyETap.h" />
+    <ClInclude Include="PolyExpiro.h" />
+    <ClInclude Include="PolyExpiro64.h" />
+    <ClInclude Include="PolyFearso.h" />
+    <ClInclude Include="PolyFlyStdio.h" />
+    <ClInclude Include="PolyFosforo.h" />
+    <ClInclude Include="PolyHatred.h" />
+    <ClInclude Include="PolyHeuristics.h" />
+    <ClInclude Include="PolyHezhi.h" />
+    <ClInclude Include="PolyInduc.h" />
+    <ClInclude Include="PolyInrar.h" />
+    <ClInclude Include="PolyJolla.h" />
+    <ClInclude Include="PolyJunkComp.h" />
+    <ClInclude Include="PolyLAMT.h" />
+    <ClInclude Include="PolyLevi.h" />
+    <ClInclude Include="PolyMabezat.h" />
+    <ClInclude Include="PolyMinit.h" />
+    <ClInclude Include="PolymorphicVirus.h" />
+    <ClInclude Include="PolyNimnul.h" />
+    <ClInclude Include="PolyParite.h" />
+    <ClInclude Include="PolyPayBack.h" />
+    <ClInclude Include="PolyPioneer.h" />
+    <ClInclude Include="PolyPolip.h" />
+    <ClInclude Include="PolyPolyK.h" />
+    <ClInclude Include="PolyRainSong.h" />
+    <ClInclude Include="PolyRansom.h" />
+    <ClInclude Include="PolySality.h" />
+    <ClInclude Include="PolySfcer.h" />
+    <ClInclude Include="PolySilcer.h" />
+    <ClInclude Include="PolyTDSS.h" />
+    <ClInclude Include="PolyThorin.h" />
+    <ClInclude Include="PolyTrojanPatched.h" />
+    <ClInclude Include="PolyTrojans64.h" />
+    <ClInclude Include="PolyTvido.h" />
+    <ClInclude Include="PolyVampiro.h" />
+    <ClInclude Include="PolyVirut.h" />
+    <ClInclude Include="PolyVulcas.h" />
+    <ClInclude Include="PolyXorer.h" />
+    <ClInclude Include="PolyXpaj.h" />
+    <ClInclude Include="PolyXpajA.h" />
+    <ClInclude Include="PolyZMorph.h" />
+    <ClInclude Include="PolyZperm.h" />
+    <ClInclude Include="PolyZperMorph.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SemiPoly.h" />
+    <ClInclude Include="SemiPolyDBScn.h" />
+    <ClInclude Include="SemiPolyTrojans.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Trojans.h" />
+    <ClInclude Include="Variables.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MaxAVPMScan.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaxEmulator\MaxEmulator.vcxproj">
+      <Project>{741b9586-1409-44a1-8564-247e1326071b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

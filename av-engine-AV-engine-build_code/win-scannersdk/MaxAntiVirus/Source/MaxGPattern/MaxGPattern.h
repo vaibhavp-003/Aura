@@ -1,0 +1,9 @@
+
+
+
+class CMaxGPattern
+{
+public:
+	CMaxGPattern();
+
+};

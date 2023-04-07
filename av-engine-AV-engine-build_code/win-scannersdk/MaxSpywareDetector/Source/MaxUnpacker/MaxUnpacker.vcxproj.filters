@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Unpackers">
+      <UniqueIdentifier>{8277a2f3-7545-4ce0-9abf-613dd5f20058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnRAR">
+      <UniqueIdentifier>{bffbebe3-9739-4e9e-99c3-d04d2c0dc908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{1558b922-8746-465a-97f3-c006c6802e06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{43f78979-6935-4f06-97d0-be0054a35fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSPack">
+      <UniqueIdentifier>{c6acf129-66a3-488f-933a-1f09808ca47f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{b8761537-86e1-4ada-a1a8-d6166a0a68cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bZlib">
+      <UniqueIdentifier>{22a50830-0b42-4160-964a-1b606f4b95b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AHPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ASPackUnpack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AverCryptDecryptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BitArtsUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CExeUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DalKryptorDecrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DexCryptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmbeddedFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FSGUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KbyshooUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaskPEUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxIsoScanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxMACUBFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxUnpackerWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MewUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MPressUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MSExpand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NeoliteUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NonPEFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NSPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NullSoft.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PCShrinker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PECompactUnpack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PECompactUnpack1.4-1.8xx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PECryptCFDecrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PePackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Petite2.xxUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PogoUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PolyCryptPEDecrypter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RLUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RPCryptDeJunker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SCPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimplePackUnpack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SMPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftComUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TelockDecryptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UnpackBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UPXUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VGCryptDecrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WinUpackUnpack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="XPackUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="YodaCryptorUnpacker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\Alloc.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\depacks.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\lzma_iface.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\LzmaDec.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\LzmaStateDecode.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\lzmat_dec.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\PackersLib.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\ReBuildFakePE.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\SpinUnPack.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\Util.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\wwunpack.c">
+      <Filter>Unpackers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\UnRAR\UnrarDLL.cpp">
+      <Filter>UnRAR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\Registry.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\Emulate.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\cabc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\cabd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\chmc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\chmd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\hlpc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\hlpd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\kwajc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\kwajd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\litc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\litd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\lzssd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\lzxc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\lzxd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\mszipc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\mszipd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\qtmd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\system.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\szddc.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\szddd.c">
+      <Filter>MSPack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\compress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\gzio.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infblock.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infcodes.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bcompress.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\blocksort.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzip2.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzip2recover.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzlib.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\crctable.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\decompress.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\huffman.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\mk251.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\randtable.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\unzcrash.c">
+      <Filter>bZlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MaxUnpacker.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\MaxUnpacker.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AHPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ASPackUnpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AverCryptDecryptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BitArtsUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CExeUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DalKryptorDecrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DexCryptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmbeddedFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FSGUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KbyshooUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskPEUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxIsoScanner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxMACUBFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxUnpackerWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MewUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MPressUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MSExpand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NeoliteUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NonPEFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NSPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NullSoft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PCShrinker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PECompactUnpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PECompactUnpack1.4-1.8xx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PECryptCFDecrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PePackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Petite2.xxUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PogoUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PolyCryptPEDecrypter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RLUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RPCryptDeJunker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SCPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimplePackUnpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SMPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftComUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TelockDecryptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UnpackBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UPXUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VGCryptDecrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WinUpackUnpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XPackUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="YodaCryptorUnpacker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\7zFile.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\7zVersion.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\Alloc.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\CDataTypes.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\depacks.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\LzmaDec.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\LzmaDecode.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\lzmat.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\Packers.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\PEC2CodecSDK.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\Types.h">
+      <Filter>Unpackers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\UnRAR\UnrarDLL.h">
+      <Filter>UnRAR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Registry.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\Emulate.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MacStruct.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\cab.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\chm.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\des.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\hlp.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\kwaj.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\lit.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\lzss.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\lzx.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\mspack.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\mszip.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\qtm.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\readbits.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\readhuff.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\sha.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\system.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\szdd.h">
+      <Filter>MSPack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infblock.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infcodes.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzlib.h">
+      <Filter>bZlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzlib_private.h">
+      <Filter>bZlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MaxUnpacker.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ASPackUnpacker">
+      <Filter>Unpackers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ASPackUnpackerx64">
+      <Filter>Unpackers</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

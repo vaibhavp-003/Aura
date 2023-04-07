@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Installer">
+      <UniqueIdentifier>{15db27f8-d1c4-42b6-b656-de236f3c5d12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{b34d1d35-b4e0-4466-bb3a-91bd68766b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{77a9a170-3e7f-4ed4-b56f-ca0393e66443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protection">
+      <UniqueIdentifier>{2458b800-258c-40fd-843e-f0e7a5bf3a6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Communication">
+      <UniqueIdentifier>{4557d260-72ae-4e3b-a3ec-a74bbee7f6f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AuUninstall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Installer\MaxInstallProduct.cpp">
+      <Filter>Installer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Installer\UltraAVInstaller.cpp">
+      <Filter>Installer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\EnumProcess.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MSIOperations.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\Registry.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\RemoteService.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Protection\MaxProtectionMgr.cpp">
+      <Filter>Protection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.cpp">
+      <Filter>Communication</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AuUninstall.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\AuUninstall.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AuUninstall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Installer\MaxInstallProduct.h">
+      <Filter>Installer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Installer\UltraAVInstaller.h">
+      <Filter>Installer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Enumprocess.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MSIOperations.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Registry.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\ValueTypeConst.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\RemoteService.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Protection\MaxProtectionConst.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Protection\MaxProtectionMgr.h">
+      <Filter>Protection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.h">
+      <Filter>Communication</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AuUninstall.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

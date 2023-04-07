@@ -1,0 +1,6 @@
+; SpecialSpyHandler.def : Declares the module parameters for the DLL.
+
+LIBRARY      "SpecialSpyHandler"
+
+EXPORTS
+    ; Explicit exports can go here

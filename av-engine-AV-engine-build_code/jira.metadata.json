@@ -1,0 +1,12 @@
+{
+	"repo_name": "av-engine",
+	"github_org": "isubscribed",
+	"environment": ["production"],
+	"jira_project": "AWIN",
+	"jira_domain": "https://intxprivacynow.atlassian.net/",
+	"jira_issue_type": "Story",
+	"team_company": "Aura",
+	"team_name": "Windows",
+	"team_email": "windows@aura.com",
+	"team_slack": "#maxsecure-engineering-onboarding"
+}

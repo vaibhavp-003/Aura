@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{287FE7DF-FAD3-4859-A0AE-F48515A297AD}</ProjectGuid>
+    <RootNamespace>MyDll</RootNamespace>
+    <SccProjectName>"$/", AAAAAAAA</SccProjectName>
+    <SccLocalPath>..\..\..\..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <ProjectName>AuCheckDll</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.32002.118</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <BuildLog>
+      <Path>$(IntDir)BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\./MyDll.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\;..\;..\header;..\..\..\..\Max Secure\Source\Common;..\..\..\..\Max Secure\Source\Common\Utils;..\..\..\..\Max Secure\Source\Common\GUI;..\..\..\..\Max Secure\Source\Common\System;..\..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\..\Max Secure\Source\Common\Communication;..\..\..\..\Max Secure\Source\Common\BalBst;..\..\..\..\Max Secure\Source\Common\fileintegrity;..\..\..\..\Max Secure\Source\Common\Protection;..\..\..\..\Max Secure\Source\Common\FileIntegrity;..\..\..\Setup\Tools\WixFiles\WiX.3.11.2\tools\sdk\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MYDLL_EXPORTS;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\./MyDll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\binx86\SDSA_release\</AssemblerListingLocation>
+      <ObjectFileName>..\binx86\SDSA_release\</ObjectFileName>
+      <ProgramDataBaseFileName>..\binx86\SDSA_release\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>WtsApi32.lib;Userenv.lib;Wininet.lib;odbc32.lib;odbccp32.lib;User32.lib;..\..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;Rpcrt4.lib;msi.lib;dutil.lib;wcautil.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\CheckDll.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>..\..\..\Setup\Tools\WixFiles\WiX.3.11.2\tools\sdk\vs2017\lib\x86;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <BuildLog>
+      <Path>$(IntDir)BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <TypeLibraryName>.\./MyDll.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\;..\;..\header;..\..\..\..\Max Secure\Source\Common;..\..\..\..\Max Secure\Source\Common\Utils;..\..\..\..\Max Secure\Source\Common\GUI;..\..\..\..\Max Secure\Source\Common\System;..\..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\..\Max Secure\Source\Common\CloseAll;..\..\..\..\Max Secure\Source\Common\Communication;..\..\..\..\Max Secure\Source\Common\BalBst;..\..\..\..\Max Secure\Source\Common\Protection;..\..\..\..\Max Secure\Source\Common\FileIntegrity;..\..\..\Setup\Tools\WixFiles\WiX.3.11.2\tools\sdk\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;NDEBUG;_WINDOWS;_USRDLL;MYDLL_EXPORTS;_UNICODE ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\./MyDll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>..\binx86\SDSA_release\</AssemblerListingLocation>
+      <ObjectFileName>..\binx86\SDSA_release\</ObjectFileName>
+      <ProgramDataBaseFileName>..\binx86\SDSA_release\</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Wininet.lib;odbc32.lib;odbccp32.lib;User32.lib;..\..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;Rpcrt4.lib;msi.lib;dutil.lib;wcautil.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\CheckDll.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\CheckDll.lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalLibraryDirectories>..\..\..\Setup\Tools\WixFiles\WiX.3.11.2\tools\sdk\vs2017\lib\x64;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <BuildLog>
+      <Path>$(IntDir)BuildLog.htm</Path>
+    </BuildLog>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\;..\header;..\..\..\..\Max Secure\Source\Common;..\..\..\..\Max Secure\Source\Common\Utils;..\..\..\..\Max Secure\Source\Common\GUI;..\..\..\..\Max Secure\Source\Common\System;..\..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\..\Max Secure\Source\Common\CloseAll;..\..\..\..\Max Secure\Source\Common\Communication;..\..\..\..\Max Secure\Source\Common\BalBst;..\..\..\..\Max Secure\Source\Common\fileintegrity;..\..\..\..\Max Secure\Source\Common\Protection;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MYDLL_EXPORTS;_UNICODE ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WtsApi32.lib;Userenv.lib;Wininet.lib;odbc32.lib;odbccp32.lib;User32.lib;..\..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;Rpcrt4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\CheckDLL.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <OutputFile>../../buildx86/sdsa_debug/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <BuildLog>
+      <Path>$(IntDir)BuildLog.htm</Path>
+    </BuildLog>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\;..\header;..\..\..\..\Max Secure\Source\Common;..\..\..\..\Max Secure\Source\Common\Utils;..\..\..\..\Max Secure\Source\Common\GUI;..\..\..\..\Max Secure\Source\Common\System;..\..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\..\Max Secure\Source\Common\CloseAll;..\..\..\..\Max Secure\Source\Common\Communication;..\..\..\..\Max Secure\Source\Common\BalBst;..\..\..\..\Max Secure\Source\Common\Protection;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;MYDLL_EXPORTS;_UNICODE ;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Wininet.lib;odbc32.lib;odbccp32.lib;User32.lib;..\..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\CheckDLL.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <EntryPointSymbol />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Bscmake>
+      <OutputFile>../../buildx86/sdsa_debug/$(ProjectName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\BalBst\BalBST.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\BalBst\PtrStack.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\BalBst\S2S.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\Communication\CriticalSection.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\FileIntegrity\CommonFileIntegrityCheck.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\GUI\ColorStatic.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\GUI\JpegDialog.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\GUI\MaxFont.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\GUI\ResourceManager.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\GUI\SetDialogBitmaps.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\GUI\xSkinButton.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\PESignature\Signature.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\Protection\MaxProtectionMgr.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\CPUInfo.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\DirectoryManager.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\EnumProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\HardDiskManager.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\MSIOperations.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\Registry.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\System\SDSystemInfo.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\Utils\Cryptor.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\Utils\RemoteService.cpp" />
+    <ClCompile Include="..\..\..\..\Max Secure\Source\Common\Utils\UninstallProducts.cpp" />
+    <ClCompile Include="..\Source\CheckDll.cpp" />
+    <ClCompile Include="..\source\CommonFunctions.cpp" />
+    <ClCompile Include="..\source\MessageBox.cpp" />
+    <ClCompile Include="..\source\MessageBoxNormal.cpp" />
+    <ClCompile Include="..\Source\RemoveProductsDlg.cpp" />
+    <ClCompile Include="..\Source\pch.cpp" />
+    <ClCompile Include="..\Source\YesNoMsgBoxDlg.cpp" />
+    <ClCompile Include="..\Source\YesNoMsgProdDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CheckDll.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\BalBst\BalBST.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\BalBst\PtrStack.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\BalBst\S2S.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Communication\CriticalSection.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Communication\MaxPipes.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\FileIntegrity\CommonFileIntegrityCheck.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\GUI\ColorStatic.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\GUI\JpegDialog.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\GUI\MaxFont.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\GUI\ResourceManager.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\GUI\SetDialogBitmaps.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\GUI\xSkinButton.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\MaxRes.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Protection\MaxProtectionMgr.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\CPUInfo.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\DirectoryManager.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\Enumprocess.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\HardDiskManager.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\MSIOperations.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\ProductInfo.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\Registry.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\System\SDSystemInfo.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Utils\Cryptor.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Utils\RemoteService.h" />
+    <ClInclude Include="..\..\..\..\Max Secure\Source\Common\Utils\UninstallProducts.h" />
+    <ClInclude Include="..\header\CommonFunctions.h" />
+    <ClInclude Include="..\header\MessageBox.h" />
+    <ClInclude Include="..\header\MessageBoxNormal.h" />
+    <ClInclude Include="..\header\RemoveProductsDlg.h" />
+    <ClInclude Include="..\header\pch.h" />
+    <ClInclude Include="..\header\YesNoMsgBoxDlg.h" />
+    <ClInclude Include="..\header\YesNoMsgProdDlg.h" />
+    <ClInclude Include="..\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\CheckDll.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\MainFrame.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="\Development-2016\MaxSpywareDetector\Source\CheckDll\CheckDll.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

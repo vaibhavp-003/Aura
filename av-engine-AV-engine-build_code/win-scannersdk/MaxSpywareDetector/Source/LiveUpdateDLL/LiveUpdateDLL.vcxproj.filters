@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{c4d13166-6837-45c0-92b2-1132bb69b496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{974a7228-116f-492b-8be3-0151c037c1ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FileIntegrity">
+      <UniqueIdentifier>{072b6061-ffb1-4479-b844-bc86f69e1760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BalBST">
+      <UniqueIdentifier>{2198052f-ecaa-49d6-825b-0891288ab98a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Communication">
+      <UniqueIdentifier>{7e850131-9850-495d-9c42-1554fa8d42a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PESignature">
+      <UniqueIdentifier>{3ff2ab48-ca03-49c2-959b-684fd45001d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DownloadMgr">
+      <UniqueIdentifier>{86061e8c-f7af-4c42-a32e-0766dda34fa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Merger">
+      <UniqueIdentifier>{0649cf5c-f41e-44ac-80db-501d01930c48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Un7Zip">
+      <UniqueIdentifier>{16520fa9-ced0-4fdd-8c41-9136d7ca9f38}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\CommonFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DownloadManagerSDK.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LiveUpdate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\LiveUpdateDLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\UpdateManagerEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\FileOperation.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\Logger.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\ProcessSync.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\VerInfo.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\EnumProcess.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\Registry.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\FileIntegrity\CommonFileIntegrityCheck.cpp">
+      <Filter>FileIntegrity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BlackDBManager.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\FSDB.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\MaxNewPESig.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\MaxQSort.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\MaxSmallPESig.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\RegFix.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2U.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2UA.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\ThreatInfo.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2O.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2U.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2OU2O.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2SA.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2U.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\UUSSU.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.cpp">
+      <Filter>Communication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\ThreadSync.cpp">
+      <Filter>Communication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\Signature.cpp">
+      <Filter>PESignature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\DownloadMgr\DownloadContext.cpp">
+      <Filter>DownloadMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\DownloadMgr\DownloadController.cpp">
+      <Filter>DownloadMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\DownloadMgr\DownloadManagerEx.cpp">
+      <Filter>DownloadMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\DownloadMgr\MaxThreadPool.cpp">
+      <Filter>DownloadMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\DownloadMgr\MessageQueue.cpp">
+      <Filter>DownloadMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\DownloadMgr\WinHttpManager.cpp">
+      <Filter>DownloadMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Merger\UpdateManager.cpp">
+      <Filter>Merger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Un7Zip\C7zDLL.cpp">
+      <Filter>Un7Zip</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\CommonFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\DownloadManagerSDK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LiveUpdate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\LiveUpdateDLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxConstant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header\UpdateManagerEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\FileOperation.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\Logger.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ProcessSync.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ThinClientConsts.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\VerInfo.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Enumprocess.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\productinfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Registry.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\FileIntegrity\CommonFileIntegrityCheck.h">
+      <Filter>FileIntegrity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BlackDBManager.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\FSDB.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\MaxNewPESig.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\MaxQSort.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\MaxSmallPESig.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\RegFix.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2U.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2UA.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\ThreatInfo.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2O.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2U.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2OU2O.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2SA.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2U.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\UUSSU.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.h">
+      <Filter>Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxPipes.h">
+      <Filter>Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\ThreadSync.h">
+      <Filter>Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\DownloadConst.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\DownloadContext.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\DownloadController.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\DownloadManagerEx.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\IController.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\IExecContext.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\MaxThreadPool.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\MBotConsts.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\MessageQueue.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\DownloadMgr\WinHttpManager.h">
+      <Filter>DownloadMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Merger\UpdateManager.h">
+      <Filter>Merger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Un7Zip\C7zDLL.h">
+      <Filter>Un7Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AuLiveUpdateDLL.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

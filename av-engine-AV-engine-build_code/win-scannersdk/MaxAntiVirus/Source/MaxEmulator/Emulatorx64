@@ -1,0 +1,534 @@
+;.386P
+;.model FLAT
+
+.code
+
+;assume cs:_text, ds:_text, es:_text
+
+PUBLIC	CheckBreakPoint
+PUBLIC	_CheckBreakPoint@16
+
+PUBLIC	SetCarry
+PUBLIC	_SetCarry@0
+
+PUBLIC	ReSetCarry
+PUBLIC	_ReSetCarry@0
+
+PUBLIC	SAR_32
+PUBLIC	_SAR_32@12
+
+PUBLIC	SAR_16
+PUBLIC	_SAR_16@12
+
+PUBLIC	SAR_HIGH_8
+PUBLIC	_SAR_HIGH_8@12
+
+PUBLIC	SAR_LOW_8
+PUBLIC	_SAR_LOW_8@12
+
+PUBLIC	RCL_32
+PUBLIC	_RCL_32@12
+
+PUBLIC	RCL_16
+PUBLIC	_RCL_16@12
+
+PUBLIC	RCL_HIGH_8
+PUBLIC	_RCL_HIGH_8@12
+
+PUBLIC	RCL_LOW_8
+PUBLIC	_RCL_LOW_8@12
+
+PUBLIC	RCR_32
+PUBLIC	_RCR_32@12
+
+PUBLIC	RCR_16
+PUBLIC	_RCR_16@12
+
+PUBLIC	RCR_HIGH_8
+PUBLIC	_RCR_HIGH_8@12
+
+PUBLIC	RCR_LOW_8
+PUBLIC	_RCR_LOW_8@12
+
+PUBLIC	MUL_32;
+PUBLIC	_MUL_32@16;
+
+PUBLIC	MUL_16;
+PUBLIC	_MUL_16@20;
+
+PUBLIC	MUL_8;
+PUBLIC	_MUL_8@20;
+
+PUBLIC	IMUL_32;
+PUBLIC	_IMUL_32@16;
+
+PUBLIC	IMUL_16;
+PUBLIC	_IMUL_16@20;
+
+PUBLIC	IMUL_8;
+PUBLIC	_IMUL_8@20;
+
+PUBLIC	DIV_32;
+PUBLIC	_DIV_32@20;
+
+PUBLIC	DIV_16;
+PUBLIC	_DIV_16@20;
+
+PUBLIC	DIV_8;
+PUBLIC	_DIV_8@20;
+
+PUBLIC	IDIV_32;
+PUBLIC	_IDIV_32@16;
+
+PUBLIC	IDIV_16;
+PUBLIC	_IDIV_16@16;
+
+PUBLIC	IDIV_8;
+PUBLIC	_IDIV_8@12;
+
+PUBLIC	BSWAP_EMUL;
+PUBLIC	_BSWAP_EMUL@8;
+
+;********************************* Start CheckBreakPoint**********************************
+_CheckBreakPoint@16:
+CheckBreakPoint proc
+	push rax
+	push rcx
+	push rdx
+	mov rax, rcx
+	mov rcx, rdx
+	mov rdx, r8
+	push r9
+	push rcx
+	call rax
+	pop rcx
+	pop r9
+	mov [r9], eax
+	pop rdx
+	pop rcx
+	pop rax
+	ret
+CheckBreakPoint endp
+;********************************* End CheckBreakPoint**********************************
+
+;********************************* Start SetCarry*********************************
+_SetCarry@0:
+SetCarry proc
+	stc
+	ret
+SetCarry endp
+;********************************* End SetCarry*********************************
+
+;********************************* Start ReSetCarry*********************************
+_ReSetCarry@0:
+ReSetCarry proc
+	clc
+	ret
+ReSetCarry endp
+;********************************* Start ReSetCarry*********************************
+
+;********************************* Start SAR_32*********************************
+_SAR_32@12:
+SAR_32 proc
+	push rbx
+	mov	rbx, r8
+	sar edx,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+SAR_32 endp
+;********************************* End SAR_32*********************************
+
+;********************************* Start SAR_16*********************************
+_SAR_16@12:
+SAR_16 proc
+	push rbx
+	mov	rbx, r8
+	sar dx,cl
+	mov [rbx], edx
+	pop rbx
+	ret 
+SAR_16 endp
+;********************************* End SAR_16*********************************
+
+;********************************* Start SAR_HIGH_8*********************************
+_SAR_HIGH_8@12:
+SAR_HIGH_8 proc
+	push rbx
+	mov	rbx, r8
+	sar dh,cl
+	mov [rbx], edx
+	pop rbx
+	ret 
+SAR_HIGH_8 endp
+;********************************* End SAR_HIGH_8*********************************
+
+;********************************* Start SAR_LOW_8*********************************
+_SAR_LOW_8@12:
+SAR_LOW_8 proc
+	push rbx
+	mov	rbx, r8
+	sar dl,cl
+	mov [rbx], edx
+	pop rbx
+	ret 
+SAR_LOW_8 endp
+;********************************* End SAR_LOW_8*********************************
+
+
+;********************************* Start RCL_32*********************************
+_RCL_32@12:
+RCL_32 proc
+	push rbx
+	mov	rbx, r8
+	rcl edx,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCL_32 endp
+;********************************* End RCL_32*********************************
+
+;********************************* Start RCL_16*********************************
+_RCL_16@12:
+RCL_16 proc
+	push rbx  
+	mov rbx, r8
+	rcl dx,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCL_16 endp
+;********************************* End RCL_16*********************************
+
+;********************************* Start RCL_HIGH_8*********************************
+_RCL_HIGH_8@12:
+RCL_HIGH_8 proc
+	push rbx
+	mov rbx, r8
+	rcl dh,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCL_HIGH_8 endp
+;********************************* End RCL_HIGH_8*********************************
+
+;********************************* Start RCL_LOW_8*********************************
+_RCL_LOW_8@12:
+RCL_LOW_8 proc
+	push rbx
+	mov rbx, r8
+	rcl dl,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCL_LOW_8 endp
+;********************************* End RCL_LOW_8*********************************
+
+;********************************* Start RCR_32*********************************
+_RCR_32@12:
+RCR_32 proc
+	push rbx
+	mov rbx, r8
+	rcr edx,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCR_32 endp
+;********************************* End RCR_32*********************************
+
+;********************************* Start RCR_16*********************************
+_RCR_16@12:
+RCR_16 proc
+	push rbx
+	mov rbx, r8
+	rcr dx,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCR_16 endp
+;********************************* End RCR_16*********************************
+
+;********************************* Start RCR_HIGH_8*********************************
+_RCR_HIGH_8@12:
+RCR_HIGH_8 proc
+	push rbx
+	mov rbx, r8
+	rcr dh,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCR_HIGH_8 endp
+;********************************* End RCR_HIGH_8*********************************
+
+;********************************* Start RCR_LOW_8*********************************
+_RCR_LOW_8@12:
+RCR_LOW_8 proc
+	push rbx
+	mov rbx, r8
+	rcr dl,cl
+	mov [rbx], edx
+	pop rbx
+	ret
+RCR_LOW_8 endp
+;********************************* End RCR_LOW_8*********************************
+
+;********************************* Start MUL_32*********************************
+_MUL_32@16:
+MUL_32 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, r9
+	mov	rdi, r8
+	mov	eax, ecx
+	mul edx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret 
+MUL_32 endp
+;********************************* End MUL_32*********************************
+
+;********************************* Start MUL_16*********************************
+_MUL_16@20:
+MUL_16 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, qword ptr [rsp+40h]
+	mov	rdi, r9
+	mov eax, ecx
+	xchg ecx, edx
+	mov	edx, r8d
+	mul cx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+MUL_16 endp
+;********************************* End RCR_LOW_16*********************************
+
+;********************************* Start MUL_8*********************************
+_MUL_8@20:
+MUL_8 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, qword ptr [rsp+40h]
+	mov	rdi, r9
+	mov eax, ecx
+	xchg ecx, edx
+	mov	edx, r8d
+	mul cl
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret 
+MUL_8 endp
+;********************************* End MUL_8*********************************
+
+;********************************* Start IMUL_32*********************************
+_IMUL_32@16:
+IMUL_32 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, r9
+	mov	rdi, r8
+	mov	eax, ecx
+	imul edx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret 
+IMUL_32 endp
+;********************************* End IMUL_32*********************************
+
+;********************************* Start IMUL_16*********************************
+_IMUL_16@20:
+IMUL_16 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, qword ptr [rsp+40h]
+	mov	rdi, r9
+	mov eax, ecx
+	xchg ecx, edx
+	mov	edx, r8d
+	imul cx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+IMUL_16 endp
+;********************************* End RCR_LOW_16*********************************
+
+;********************************* Start IMUL_8*********************************
+_IMUL_8@20:
+IMUL_8 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, qword ptr [rsp+40h]
+	mov	rdi, r9
+	mov eax, ecx
+	xchg ecx, edx
+	mov	edx, r8d
+	imul cl
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+IMUL_8 endp
+;********************************* End IMUL_8*********************************
+
+;********************************* Start DIV_32*********************************
+_DIV_32@20:
+DIV_32 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, qword ptr [rsp+40h]
+	mov	rdi, r9
+	mov eax, ecx
+	xchg ecx, edx
+	mov	edx, r8d
+	div ecx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+DIV_32 endp
+;********************************* End DIV_32*********************************
+
+;********************************* Start DIV_16*********************************
+_DIV_16@20:
+DIV_16 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, qword ptr [rsp+40h]
+	mov	rdi, r9
+	mov eax, ecx
+	xchg ecx, edx
+	mov	edx, r8d
+	div cx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+DIV_16 endp
+;********************************* End RCR_LOW_16*********************************
+
+;********************************* Start DIV_8*********************************
+_DIV_8@20:
+DIV_8 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, qword ptr [rsp+40h]
+	mov	rdi, r9
+	mov eax, ecx
+	xchg ecx, edx
+	mov	edx, r8d
+	div cl
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+DIV_8 endp
+;********************************* End DIV_8*********************************
+
+;********************************* Start IDIV_32*********************************
+_IDIV_32@16:
+IDIV_32 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, r9
+	mov	rdi, r8
+	mov	eax, ecx
+	mov ecx, edx
+	cdq
+	idiv ecx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+IDIV_32 endp
+;********************************* End IDIV_32*********************************
+
+;********************************* Start IDIV_16*********************************
+_IDIV_16@16:
+IDIV_16 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, r9
+	mov	rdi, r8
+	mov	eax, ecx
+	mov ecx, edx
+	cwd
+	idiv cx
+	mov [rsi], edx
+	mov [rdi], eax
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+IDIV_16 endp
+;********************************* End RCR_LOW_16*********************************
+
+;********************************* Start IDIV_8*********************************
+_IDIV_8@12:
+IDIV_8 proc
+	push rsi
+	push rdi
+	push rax
+	mov	rsi, r8
+	mov	eax, ecx
+	cbw
+	mov ecx, edx
+	idiv cl
+	mov [rsi], edx
+	pop rax
+	pop rdi
+	pop rsi
+	ret
+IDIV_8 endp
+;********************************* End IDIV_8*********************************
+
+;********************************* Start IDIV_8*********************************
+_BSWAP_EMUL@8:
+BSWAP_EMUL proc
+	push rax
+	mov eax, ecx
+	xchg AH, AL
+	rol eax, 16
+	xchg AH, AL
+	mov [rdx], eax
+	pop rax
+	ret
+BSWAP_EMUL endp
+;********************************* End IDIV_8*********************************
+END

@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7AAB131-8F9F-49BB-9D3E-1880D83926F5}</ProjectGuid>
+    <RootNamespace>MaxUnpacker</RootNamespace>
+    <SccProjectName>"$/", AAAAAAAA</SccProjectName>
+    <SccLocalPath>..\..\..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCDLLProj</Keyword>
+    <ProjectName>AuUnpacker</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.32002.118</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\..\..\NIH\Source\UnPackers;..\..\..\Max Secure\Source\Common\UnRAR;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\MaxAntiVirus\Source\MaxEmulator;..\..\..\MaxAntiVirus\Source\MaxAVDBScan;..\..\..\NIH\Source\MSPack;..\..\..\Max Secure\Source\ZipArchive\zlib;..\..\..\Max Secure\Source\ZipArchive\bZlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;..\..\..\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\MaxUnpacker.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\..\..\NIH\Source\UnPackers;..\..\..\Max Secure\Source\Common\UnRAR;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\MaxAntiVirus\Source\MaxEmulator;..\..\..\MaxAntiVirus\Source\MaxAVDBScan;..\..\..\NIH\Source\MSPack;..\..\..\Max Secure\Source\ZipArchive\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;..\..\..\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\MaxUnpacker.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\;..\..\..\NIH\Source\UnPackers;..\..\..\Max Secure\Source\Common\UnRAR;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\MaxAntiVirus\Source\MaxEmulator;..\..\..\MaxAntiVirus\Source\MaxAVDBScan;..\..\..\NIH\Source\MSPack;..\..\..\Max Secure\Source\ZipArchive\zlib;..\..\..\Max Secure\Source\ZipArchive\bZlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;..\..\..\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\MaxUnpacker.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\;..\..\..\NIH\Source\UnPackers;..\..\..\Max Secure\Source\Common\UnRAR;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\MaxAntiVirus\Source\MaxEmulator;..\..\..\MaxAntiVirus\Source\MaxAVDBScan;..\..\..\NIH\Source\MSPack;..\..\..\Max Secure\Source\ZipArchive\zlib;..\..\..\Max Secure\Source\ZipArchive\bZlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Imagehlp.lib;..\..\..\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Binaries\AuEmulator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\MaxUnpacker.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware />
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\Emulate.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\Registry.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\UnRAR\UnrarDLL.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bcompress.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\blocksort.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzip2.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzip2recover.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzlib.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\crctable.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\decompress.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\huffman.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\mk251.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\randtable.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\unzcrash.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\adler32.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\compress.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\crc32.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\deflate.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\gzio.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infblock.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infcodes.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inffast.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inflate.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inftrees.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infutil.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\trees.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\uncompr.c" />
+    <ClCompile Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zutil.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\cabc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\cabd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\chmc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\chmd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\hlpc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\hlpd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\kwajc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\kwajd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\litc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\litd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\lzssd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\lzxc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\lzxd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\mszipc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\mszipd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\qtmd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\system.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\szddc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\MSPack\szddd.c" />
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\Alloc.c" />
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\depacks.c" />
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\LzmaDec.c" />
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\LzmaStateDecode.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\lzmat_dec.c" />
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\lzma_iface.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\PackersLib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\ReBuildFakePE.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\SpinUnPack.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\Util.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\NIH\Source\UnPackers\wwunpack.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AHPackUnpacker.cpp" />
+    <ClCompile Include="ASPackUnpack.cpp" />
+    <ClCompile Include="AverCryptDecryptor.cpp" />
+    <ClCompile Include="BitArtsUnpacker.cpp" />
+    <ClCompile Include="CExeUnpacker.cpp" />
+    <ClCompile Include="DalKryptorDecrypt.cpp" />
+    <ClCompile Include="DexCryptor.cpp" />
+    <ClCompile Include="EmbeddedFile.cpp" />
+    <ClCompile Include="FSGUnpacker.cpp" />
+    <ClCompile Include="KbyshooUnpacker.cpp" />
+    <ClCompile Include="MaskPEUnpacker.cpp" />
+    <ClCompile Include="MaxIsoScanner.cpp" />
+    <ClCompile Include="MaxMACUBFile.cpp" />
+    <ClCompile Include="MaxUnpacker.cpp" />
+    <ClCompile Include="MaxUnpackerWrapper.cpp" />
+    <ClCompile Include="MewUnpacker.cpp" />
+    <ClCompile Include="MPressUnpacker.cpp" />
+    <ClCompile Include="MSExpand.cpp" />
+    <ClCompile Include="NeoliteUnpacker.cpp" />
+    <ClCompile Include="NonPEFile.cpp" />
+    <ClCompile Include="NPackUnpacker.cpp" />
+    <ClCompile Include="NSPackUnpacker.cpp" />
+    <ClCompile Include="NullSoft.cpp" />
+    <ClCompile Include="PCShrinker.cpp" />
+    <ClCompile Include="PECompactUnpack.cpp" />
+    <ClCompile Include="PECompactUnpack1.4-1.8xx.cpp" />
+    <ClCompile Include="PECryptCFDecrypt.cpp" />
+    <ClCompile Include="PePackUnpacker.cpp" />
+    <ClCompile Include="Petite2.xxUnpacker.cpp" />
+    <ClCompile Include="PogoUnpacker.cpp" />
+    <ClCompile Include="PolyCryptPEDecrypter.cpp" />
+    <ClCompile Include="RLUnpacker.cpp" />
+    <ClCompile Include="RPCryptDeJunker.cpp" />
+    <ClCompile Include="SCPackUnpacker.cpp" />
+    <ClCompile Include="SimplePackUnpack.cpp" />
+    <ClCompile Include="SMPackUnpacker.cpp" />
+    <ClCompile Include="SoftComUnpacker.cpp" />
+    <ClCompile Include="SPackUnpacker.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TelockDecryptor.cpp" />
+    <ClCompile Include="UnpackBase.cpp" />
+    <ClCompile Include="UPXUnpacker.cpp" />
+    <ClCompile Include="VGCryptDecrypt.cpp" />
+    <ClCompile Include="VPackUnpacker.cpp" />
+    <ClCompile Include="WinUpackUnpack.cpp" />
+    <ClCompile Include="XPackUnpacker.cpp" />
+    <ClCompile Include="YodaCryptorUnpacker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="ASPackUnpacker">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"C:\Program Files\Microsoft Visual Studio 8\VC\bin\ml" /c /Cx /coff %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FullPath).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"C:\Program Files\Microsoft Visual Studio 8\VC\bin\ml" /c /Cx /coff %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath).obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\bin\Hostx86\x86\ml.exe" /c /Cx /coff %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\ml" /c /Cx /coff %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ASPackUnpackerx64">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"C:\Program Files\Microsoft Visual Studio 8\VC\bin\x86_amd64\ml64.exe" /c /Cx %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.29.30133\bin\Hostx64\x64\ml64.exe" /c /Cx %(FullPath)
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="MaxUnpacker.def" />
+    <None Include="res\MaxUnpacker.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\Emulate.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MacStruct.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Registry.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\UnRAR\UnrarDLL.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzlib.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\bZlib\bzlib_private.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\deflate.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infblock.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infcodes.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inffast.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inffixed.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\inftrees.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\infutil.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\trees.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zconf.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zlib.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\ZipArchive\zlib\zutil.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\cab.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\chm.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\des.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\hlp.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\kwaj.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\lit.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\lzss.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\lzx.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\mspack.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\mszip.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\qtm.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\readbits.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\readhuff.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\sha.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\system.h" />
+    <ClInclude Include="..\..\..\NIH\Source\MSPack\szdd.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\7zFile.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\7zVersion.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\Alloc.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\CDataTypes.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\depacks.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\LzmaDec.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\LzmaDecode.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\lzmat.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\Packers.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\PEC2CodecSDK.h" />
+    <ClInclude Include="..\..\..\NIH\Source\UnPackers\Types.h" />
+    <ClInclude Include="AHPackUnpacker.h" />
+    <ClInclude Include="ASPackUnpack.h" />
+    <ClInclude Include="AverCryptDecryptor.h" />
+    <ClInclude Include="BitArtsUnpacker.h" />
+    <ClInclude Include="CExeUnpacker.h" />
+    <ClInclude Include="DalKryptorDecrypt.h" />
+    <ClInclude Include="DexCryptor.h" />
+    <ClInclude Include="EmbeddedFile.h" />
+    <ClInclude Include="FSGUnpacker.h" />
+    <ClInclude Include="KbyshooUnpacker.h" />
+    <ClInclude Include="MaskPEUnpacker.h" />
+    <ClInclude Include="MaxIsoScanner.h" />
+    <ClInclude Include="MaxMACUBFile.h" />
+    <ClInclude Include="MaxUnpacker.h" />
+    <ClInclude Include="MaxUnpackerWrapper.h" />
+    <ClInclude Include="MewUnpacker.h" />
+    <ClInclude Include="MPressUnpacker.h" />
+    <ClInclude Include="MSExpand.h" />
+    <ClInclude Include="NeoliteUnpacker.h" />
+    <ClInclude Include="NonPEFile.h" />
+    <ClInclude Include="NPackUnpacker.h" />
+    <ClInclude Include="NSPackUnpacker.h" />
+    <ClInclude Include="NullSoft.h" />
+    <ClInclude Include="PCShrinker.h" />
+    <ClInclude Include="PECompactUnpack.h" />
+    <ClInclude Include="PECompactUnpack1.4-1.8xx.h" />
+    <ClInclude Include="PECryptCFDecrypt.h" />
+    <ClInclude Include="PePackUnpacker.h" />
+    <ClInclude Include="Petite2.xxUnpacker.h" />
+    <ClInclude Include="PogoUnpacker.h" />
+    <ClInclude Include="PolyCryptPEDecrypter.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RLUnpacker.h" />
+    <ClInclude Include="RPCryptDeJunker.h" />
+    <ClInclude Include="SCPackUnpacker.h" />
+    <ClInclude Include="SimplePackUnpack.h" />
+    <ClInclude Include="SMPackUnpacker.h" />
+    <ClInclude Include="SoftComUnpacker.h" />
+    <ClInclude Include="SPackUnpacker.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TelockDecryptor.h" />
+    <ClInclude Include="UnpackBase.h" />
+    <ClInclude Include="UPXUnpacker.h" />
+    <ClInclude Include="VGCryptDecrypt.h" />
+    <ClInclude Include="VPackUnpacker.h" />
+    <ClInclude Include="WinUpackUnpack.h" />
+    <ClInclude Include="XPackUnpacker.h" />
+    <ClInclude Include="YodaCryptorUnpacker.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MaxUnpacker.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

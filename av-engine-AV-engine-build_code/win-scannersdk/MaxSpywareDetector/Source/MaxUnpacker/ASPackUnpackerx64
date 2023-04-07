@@ -1,0 +1,953 @@
+
+;.386P
+;.model FLAT
+
+.code
+
+;assume cs:_text, ds:_text, es:_text
+
+PUBLIC	Decompress
+PUBLIC	_Decompress@16
+
+_Decompress@16:
+
+Decompress 	proc
+	mov	eax, dword ptr 20[esp-4]
+	sub	esp, 852
+	lea	ecx, dword ptr [esp+852-848]
+	push	rax
+	call	Create
+	mov	ecx, dword ptr 12[esp+848]
+	mov	edx, dword ptr 8[esp+848]
+	push	rcx
+	push	rdx
+	lea	ecx, dword ptr [esp+860-848]
+	call	Init
+	test	al, al
+	jne	$L874
+	or	eax, -1
+	add	esp, 852
+	ret	16
+$L874:
+	mov	ecx, dword ptr 16[esp+848]
+	lea	eax, dword ptr [esp+852-852]
+	push	rax
+	push	rcx
+	lea	ecx, dword ptr [esp+860-848]
+	call	Decode
+	test	al, al
+	jne	$L876
+	or	eax, -1
+	add	esp, 852
+	ret	16
+$L876:
+	mov	eax, dword ptr [esp+852-852]
+	add	esp, 852
+	ret	16
+Decompress endp
+
+_kLenStart DB	00H
+	DB	01H
+	DB	02H
+	DB	03H
+	DB	04H
+	DB	05H
+	DB	06H
+	DB	07H
+	DB	08H
+	DB	0aH
+	DB	0cH
+	DB	0eH
+	DB	010H
+	DB	014H
+	DB	018H
+	DB	01cH
+	DB	020H
+	DB	028H
+	DB	030H
+	DB	038H
+	DB	040H
+	DB	050H
+	DB	060H
+	DB	070H
+	DB	080H
+	DB	0a0H
+	DB	0c0H
+	DB	0e0H
+_kLenDirectBits DB 00H
+	DB	00H
+	DB	00H
+	DB	00H
+	DB	00H
+	DB	00H
+	DB	00H
+	DB	00H
+	DB	01H
+	DB	01H
+	DB	01H
+	DB	01H
+	DB	02H
+	DB	02H
+	DB	02H
+	DB	02H
+	DB	03H
+	DB	03H
+	DB	03H
+	DB	03H
+	DB	04H
+	DB	04H
+	DB	04H
+	DB	04H
+	DB	05H
+	DB	05H
+	DB	05H
+	DB	05H
+_kDistDirectBits DB 00H
+	DB	00H
+	DB	00H
+	DB	00H
+	DB	01H
+	DB	01H
+	DB	02H
+	DB	02H
+	DB	03H
+	DB	03H
+	DB	04H
+	DB	04H
+	DB	05H
+	DB	05H
+	DB	06H
+	DB	06H
+	DB	07H
+	DB	07H
+	DB	08H
+	DB	08H
+	DB	09H
+	DB	09H
+	DB	0aH
+	DB	0aH
+	DB	0bH
+	DB	0bH
+	DB	0cH
+	DB	0cH
+	DB	0dH
+	DB	0dH
+	DB	0eH
+	DB	0eH
+	DB	0fH
+	DB	0fH
+	DB	010H
+	DB	010H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	011H
+	DB	012H
+	DB	012H
+	DB	012H
+	DB	012H
+	DB	012H
+	DB	012H
+	DB	012H
+	DB	012H
+
+
+
+ReadBits proc
+	push	rcx
+	mov	edx, ecx
+	push	rsi
+	mov	ecx, 8
+	push	rdi
+	cmp	dword ptr [edx+4], ecx
+	jb	$L573
+	push	rbx
+	mov	esi, -8
+$L571:
+	mov	eax, dword ptr [edx]
+	mov	bl, byte ptr [eax]
+	inc	eax
+	mov	byte ptr [esp+16-4], bl
+	mov	dword ptr [edx], eax
+	mov	eax, dword ptr [edx+8]
+	mov	edi, dword ptr [esp+16-4]
+	shl	eax, 8
+	and	edi, 0ffH
+	or	eax, edi
+	mov	edi, dword ptr [edx+4]
+	add	edi, esi
+	mov	dword ptr [edx+8], eax
+	mov	eax, edi
+	mov	dword ptr [edx+4], edi
+	cmp	eax, ecx
+	jae	$L571
+	pop	rbx
+$L573:
+	mov	esi, dword ptr [edx+4]
+	mov	eax, dword ptr [edx+8]
+	mov	edi, dword ptr 8[esp+8]
+	sub	ecx, esi
+	shr	eax, cl
+	mov	ecx, 24
+	sub	ecx, edi
+	and	eax, 00ffffffH
+	shr	eax, cl
+	add	esi, edi
+	pop	rdi
+	mov	dword ptr [edx+4], esi
+	pop	rsi
+	pop	rcx
+	ret	4
+ReadBits endp
+
+
+
+HCreate proc
+	mov	eax, dword ptr 8[esp-4]
+	mov	edx, dword ptr 12[esp-4]
+	mov	dword ptr [ecx+132], eax
+	mov	dword ptr [ecx+136], edx
+	lea	eax, dword ptr [edx+eax*4]
+	mov	dword ptr [ecx+140], eax
+	add	eax, 256
+	ret	8
+HCreate endp
+ 
+ 
+SetCodeLengths proc
+	sub	esp, 152
+	push	rbx
+	push	rbp
+	push	rsi
+	mov	edx, ecx
+	push	rdi
+	mov	ecx, 15
+	mov	ebp, dword ptr [edx+132]
+	xor	eax, eax
+	lea	edi, dword ptr [esp+172-128]
+	xor	esi, esi
+	rep stosd
+	mov	edi, dword ptr 8[esp+164]
+	cmp	ebp, esi
+	mov	dword ptr [esp+168-136], edx
+	jbe	$L632
+$L630:
+	xor	ecx, ecx
+	mov	cl, byte ptr [eax+edi]
+	mov	ebx, dword ptr [esp+ecx*4+168-128]
+	lea	ecx, dword ptr [esp+ecx*4+168-128]
+	inc	ebx
+	inc	eax
+	cmp	eax, ebp
+	mov	dword ptr [ecx], ebx
+	jb	$L630
+$L632:
+	mov	ecx, 23
+	mov	dword ptr [esp+168-128], esi
+	mov	dword ptr [edx+4], esi
+	mov	dword ptr [edx+68], esi
+	mov	dword ptr [esp+168-64], esi
+	xor	edi, edi
+	mov	dword ptr [esp+168-140], esi
+	mov	dword ptr [esp+168-152], 1
+	mov	dword ptr [esp+168-144], ecx
+	lea	ebp, dword ptr [edx+8]
+	mov	dword ptr [esp+168-148], esi
+$L635:
+	mov	eax, dword ptr [esp+esi+172-128]
+	shl	eax, cl
+	add	edi, eax
+	cmp	edi, 1000000H
+	mov	dword ptr [esp+168-132], edi
+	ja	$L913
+	mov	eax, dword ptr [esp+esi+168-128]
+	mov	dword ptr [ebp], edi
+	mov	ebx, dword ptr [ebp+60]
+	add	eax, ebx
+	cmp	ecx, 16
+	mov	dword ptr [ebp+64], eax
+	mov	dword ptr [esp+esi+172-64], eax
+	jl	$L636
+	mov	esi, dword ptr [ebp]
+	mov	eax, dword ptr [esp+168-152]
+	mov	ebx, dword ptr [esp+168-140]
+	mov	edi, dword ptr [edx+140]
+	shr	esi, 16
+	mov	ecx, esi
+	and	eax, 0ffH
+	sub	ecx, ebx
+	add	edi, ebx
+	mov	bl, al
+	mov	edx, ecx
+	mov	bh, bl
+	mov	dword ptr [esp+168-140], esi
+	mov	eax, ebx
+	mov	esi, dword ptr [esp+168-148]
+	shl	eax, 16
+	mov	ax, bx
+	shr	ecx, 2
+	rep stosd
+	mov	ecx, edx
+	mov	edx, dword ptr [esp+168-136]
+	and	ecx, 3
+	rep stosb
+	mov	edi, dword ptr [esp+168-132]
+	mov	ecx, dword ptr [esp+168-144]
+$L636:
+	mov	eax, dword ptr [esp+168-152]
+	add	esi, 4
+	inc	eax
+	dec	ecx
+	add	ebp, 4
+	cmp	ecx, 9
+	mov	dword ptr [esp+168-152], eax
+	mov	dword ptr [esp+168-144], ecx
+	mov	dword ptr [esp+168-148], esi
+	jge	$L635
+	cmp	edi, 1000000H
+	je	$L641
+$L913:
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	xor	al, al
+	pop	rbx
+	add	esp, 152
+	ret	4
+$L641:
+	mov	eax, dword ptr [edx+132]
+	xor	ecx, ecx
+	test	eax, eax
+	jbe	$L644
+	mov	esi, dword ptr 8[esp+164]
+$L642:
+	mov	al, byte ptr [ecx+esi]
+	test	al, al
+	je	$L643
+	mov	edi, dword ptr [edx+136]
+	and	eax, 0ffH
+	mov	eax, dword ptr [esp+eax*4+168-64]
+	mov	dword ptr [edi+eax*4], ecx
+	xor	eax, eax
+	mov	al, byte ptr [ecx+esi]
+	mov	edi, dword ptr [esp+eax*4+168-64]
+	lea	eax, dword ptr [esp+eax*4+168-64]
+	inc	edi
+	mov	dword ptr [eax], edi
+$L643:
+	mov	eax, dword ptr [edx+132]
+	inc	ecx
+	cmp	ecx, eax
+	jb	$L642
+$L644:
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	mov	al, 1
+	pop	rbx
+	add	esp, 152
+	ret	4
+SetCodeLengths endp
+ 
+ 
+DecodeSymbol proc
+	push	rcx
+	push	rbx
+	push	rsi
+	mov	esi, ecx
+	push	rdi
+	mov	eax, dword ptr [esi]
+	cmp	dword ptr [eax+4], 8
+	jb	$L930
+$L928:
+	mov	ecx, dword ptr [eax]
+	mov	dl, byte ptr [ecx]
+	inc	ecx
+	mov	byte ptr [esp+16-4], dl
+	mov	dword ptr [eax], ecx
+	mov	ecx, dword ptr [eax+8]
+	mov	edx, dword ptr [esp+16-4]
+	shl	ecx, 8
+	and	edx, 0ffH
+	or	ecx, edx
+	mov	edx, dword ptr [eax+4]
+	add	edx, -8
+	mov	dword ptr [eax+8], ecx
+	mov	ecx, edx
+	mov	dword ptr [eax+4], edx
+	cmp	ecx, 8
+	jae	$L928
+$L930:
+	mov	edx, dword ptr [eax+4]
+	mov	eax, dword ptr [eax+8]
+	mov	ecx, 8
+	sub	ecx, edx
+	shr	eax, cl
+	mov	ecx, dword ptr [esi+36]
+	and	eax, 0fffe00H
+	cmp	eax, ecx
+	jae	$L651
+	mov	edx, dword ptr [esi+140]
+	mov	ecx, eax
+	shr	ecx, 16
+	xor	ebx, ebx
+	mov	bl, byte ptr [ecx+edx]
+	mov	edx, ebx
+	jmp	$L663
+$L651:
+	cmp	eax, dword ptr [esi+44]
+	jae	$L653
+	cmp	eax, dword ptr [esi+40]
+	sbb	edx, edx
+	add	edx, 10
+	jmp	$L663
+$L653:
+	cmp	eax, dword ptr [esi+48]
+	jae	$L657
+	mov	edx, 11
+	jmp	$L663
+$L657:
+	cmp	eax, dword ptr [esi+52]
+	jae	$L659
+	mov	edx, 12
+	jmp	$L663
+$L659:
+	cmp	eax, dword ptr [esi+56]
+	jae	$L661
+	mov	edx, 13
+	jmp	$L663
+$L661:
+	cmp	eax, dword ptr [esi+60]
+	sbb	edx, edx
+	add	edx, 15
+$L663:
+	mov	ecx, dword ptr [esi]
+	mov	edi, dword ptr [ecx+4]
+	add	edi, edx
+	mov	dword ptr [ecx+4], edi
+	mov	ebx, dword ptr [esi+edx*4]
+	mov	ecx, 24
+	sub	eax, ebx
+	sub	ecx, edx
+	pop	rdi
+	shr	eax, cl
+	mov	ecx, dword ptr [esi+edx*4+68]
+	add	eax, ecx
+	mov	ecx, dword ptr [esi+136]
+	pop	rsi
+	pop	rbx
+	mov	eax, dword ptr [ecx+eax*4]
+	pop	rcx
+	ret	0
+DecodeSymbol endp	
+ 
+ 
+Create proc
+	push	rbx
+	push	rsi
+	push	rdi
+	mov	edi, ecx
+	xor	edx, edx
+	xor	eax, eax
+	lea	esi, dword ptr [edi+616]
+$L783:
+	mov	dword ptr [esi], edx
+	push 	rsi
+	call	GetDelta	
+	
+	LEA   rsi, _kDistDirectBits
+	mov	cl, byte ptr [rsi+rax]
+	pop	rsi
+	mov	ebx, 1
+	add	esi, 4
+	shl	ebx, cl
+	add	edx, ebx
+	inc	eax
+	cmp	eax, 58
+	jb	$L783
+	mov	eax, dword ptr 8[esp+8]
+	lea	ecx, dword ptr [edi+16]
+	push	rax
+	push	721
+	call	HCreate
+	push	rax
+	push	28
+	lea	ecx, dword ptr [edi+160]
+	call	HCreate
+	push	rax
+	push	8
+	lea	ecx, dword ptr [edi+304]
+	call	HCreate
+	push	rax
+	push	19
+	lea	ecx, dword ptr [edi+448]
+	call	HCreate
+	mov	dword ptr [edi+608], eax
+	pop	rdi
+	pop	rsi
+	add	eax, 757
+	pop	rbx
+	ret	4
+Create endp
+ 
+ 
+Init proc
+	mov	eax, dword ptr 12[esp-4]
+	mov	edx, ecx
+	mov	ecx, dword ptr 8[esp-4]
+	push	rdi
+	mov	dword ptr [edx], eax
+	lea	eax, dword ptr [edx+4]
+	mov	dword ptr [eax], ecx
+	mov	dword ptr [eax+4], 32
+	mov	dword ptr [edx+16], eax
+	mov	dword ptr [edx+160], eax
+	mov	dword ptr [edx+304], eax
+	mov	dword ptr [edx+448], eax
+	xor	eax, eax
+	mov	ecx, 189
+	mov	dword ptr [edx+592], eax
+	mov	dword ptr [edx+596], eax
+	mov	dword ptr [edx+600], eax
+	mov	edi, dword ptr [edx+608]
+	mov	dword ptr [edx+604], eax
+	rep stosd
+	mov	ecx, edx
+	stosb
+	call	ReadTables
+	pop	rdi
+	ret	8
+Init endp
+ 
+ReadTables proc
+	sub	esp, 780
+	push	rbx
+	mov	ebx, ecx
+	push	rbp
+	push	rsi
+	lea	ebp, dword ptr [ebx+4]
+	push	rdi
+	push	1
+	mov	ecx, ebp
+	call	ReadBits
+	test	eax, eax
+	jne	$L803
+	mov	edi, dword ptr [ebx+608]
+	mov	ecx, 189
+	rep stosd
+	stosb
+$L803:
+	xor	esi, esi
+$L806:
+	push	4
+	mov	ecx, ebp
+	call	ReadBits
+	mov	byte ptr [esp+esi+796-780], al
+	inc	esi
+	cmp	esi, 19
+	jb	$L806
+	lea	edi, dword ptr [ebx+448]
+	lea	eax, dword ptr [esp+796-780]
+	push	rax
+	mov	ecx, edi
+	call	SetCodeLengths
+	test	al, al
+	jne	$L809
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	pop	rbx
+	add	esp, 780
+	ret	0
+$L809:
+	xor	esi, esi
+$L811:
+	mov	ecx, edi
+	call	DecodeSymbol
+	cmp	eax, 16
+	jae	$L992
+	mov	ecx, dword ptr [ebx+608]
+	mov	dl, byte ptr [ecx+esi]
+	add	dl, al
+	and	dl, 15
+	mov	byte ptr [esp+esi+796-760], dl
+	inc	esi
+	jmp	$L828
+$L992:
+	jne	$L816
+	push	2
+	mov	ecx, ebp
+	call	ReadBits
+	add	eax, 3
+	test	eax, eax
+	jle	$L828
+$L819:
+	cmp	esi, 757
+	jge	$L812
+	mov	cl, byte ptr [esp+esi+795-760]
+	dec	eax
+	mov	byte ptr [esp+esi+796-760], cl
+	inc	esi
+	test	eax, eax
+	jg	$L819
+	jmp	$L828
+$L816:
+	cmp	eax, 17
+	jne	$L824
+	push	3
+	mov	ecx, ebp
+	call	ReadBits
+	add	eax, 3
+	jmp	$L825
+$L824:
+	push	7
+	mov	ecx, ebp
+	call	ReadBits
+	add	eax, 11
+$L825:
+	test	eax, eax
+	jle	$L828
+$L826:
+	cmp	esi, 757
+	jge	$L812
+	mov	byte ptr [esp+esi+796-760], 0
+	inc	esi
+	dec	eax
+	test	eax, eax
+	jg	$L826
+$L828:
+	cmp	esi, 757
+	jl	$L811
+$L812:
+	lea	edx, dword ptr [esp+796-760]
+	lea	ecx, dword ptr [ebx+16]
+	push	rdx
+	call	SetCodeLengths
+	test	al, al
+	jne	$L829
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	pop	rbx
+	add	esp, 780
+	ret	0
+$L829:
+	lea	eax, dword ptr [esp+1517-760]
+	lea	ecx, dword ptr [ebx+160]
+	push	rax
+	call	SetCodeLengths
+	test	al, al
+	jne	$L830
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	pop	rbx
+	add	esp, 780
+	ret	0
+$L830:
+	lea	ecx, dword ptr [esp+1545-760]
+	push	rcx
+	lea	ecx, dword ptr [ebx+304]
+	call	SetCodeLengths
+	test	al, al
+	jne	$L831
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	pop	rbx
+	add	esp, 780
+	ret	0
+$L831:
+	mov	byte ptr [ebx+612], 0
+	xor	eax, eax
+$L832:
+	cmp	byte ptr [esp+eax+1545-760], 3
+	jne	$L985
+	inc	eax
+	cmp	eax, 8
+	jb	$L832
+	jmp	$L834
+$L985:
+	mov	byte ptr [ebx+612], 1
+$L834:
+	mov	edi, dword ptr [ebx+608]
+	lea	esi, dword ptr [esp+796-760]
+	mov	ecx, 757
+	rep	movsb
+	
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	mov	al, 1
+	pop	rbx
+	add	esp, 780
+	ret	0
+ReadTables endp
+ 
+GetDelta proc
+	 call	Noop
+Nopp:
+	 nop
+Noop:
+	 pop	rsi
+	 lea	rdi, offset Nopp
+	 sub	rsi, rdi
+	 ret
+GetDelta endp
+
+ 
+Decode proc
+	sub	esp, 20
+	mov	eax, dword ptr 12[esp+16]
+	push	rbx
+	push	rbp
+	push	rsi
+	mov	dword ptr [eax], 0
+	mov	eax, dword ptr 8[esp+28]
+	push	rdi
+	xor	edi, edi
+	test	eax, eax
+	mov	esi, ecx
+	mov	dword ptr [esp+36-20], edi
+	jbe	$L1068
+$L844:
+	lea	ecx, dword ptr [esi+16]
+	call	DecodeSymbol
+	cmp	eax, 256
+	jae	$L847
+	mov	ecx, dword ptr [esi]
+	mov	byte ptr [ecx], al
+	mov	ecx, dword ptr [esi]
+	inc	ecx
+	inc	edi
+	mov	dword ptr [esi], ecx
+	mov	dword ptr [esp+36-20], edi
+	jmp	$L865
+$L847:
+	cmp	eax, 720
+	jae	$L849
+	add	eax, -256
+	mov	ebp, eax
+	and	eax, 7
+	shr	ebp, 3
+	lea	edx, dword ptr [eax+2]
+	cmp	eax, 7
+	mov	dword ptr [esp+36-16], edx
+	jne	$L854
+	lea	ecx, dword ptr [esi+160]
+	call	DecodeSymbol
+	mov	ecx, dword ptr [esi+8]
+	xor	ebx, ebx
+	push 	rsi
+	call	GetDelta	
+	lea rsi, _kLenDirectBits		
+	mov	bl, byte ptr [rsi+rax]
+	pop	rsi
+	cmp	ecx, 8
+	jb	$L1006
+$L1004:
+	mov	ecx, dword ptr [esi+4]
+	mov	dl, byte ptr [ecx]
+	inc	ecx
+	mov	byte ptr [esp+36-12], dl
+	mov	dword ptr [esi+4], ecx
+	mov	ecx, dword ptr [esi+12]
+	mov	edx, dword ptr [esp+36-12]
+	shl	ecx, 8
+	and	edx, 0ffH
+	or	ecx, edx
+	mov	edx, dword ptr [esi+8]
+	add	edx, -8
+	mov	dword ptr [esi+12], ecx
+	mov	ecx, edx
+	mov	dword ptr [esi+8], edx
+	cmp	ecx, 8
+	jae	$L1004
+$L1006:
+	mov	edi, dword ptr [esi+8]
+	mov	edx, dword ptr [esi+12]
+	mov	ecx, 8
+	sub	ecx, edi
+	add	edi, ebx
+	shr	edx, cl
+	mov	ecx, 24
+	mov	dword ptr [esi+8], edi
+	sub	ecx, ebx
+	and	edx, 0ffffffH
+	shr	edx, cl
+	xor	ecx, ecx
+	push 	rsi
+	call	GetDelta	
+	lea rsi, _kLenStart	
+	mov	cl, byte ptr [rsi+rax]
+	pop	rsi
+	mov	eax, dword ptr [esp+36-16]
+	add	ecx, edx
+	add	eax, ecx
+	mov	dword ptr [esp+36-16], eax
+$L854:
+	mov	al, byte ptr [esi+612]
+	mov	ebx, dword ptr [esi+ebp*4+616]
+	xor	edx, edx
+	push 	rsi
+	call	GetDelta
+	lea rsi, _kDistDirectBits	
+	mov	dl, byte ptr [rsi+rbp]
+	pop	rsi
+	test	al, al
+	mov	edi, edx
+	je	$L858
+	cmp	edi, 3
+	jb	$L858
+	mov	eax, dword ptr [esi+8]
+	lea	ebp, dword ptr [edi-3]
+	cmp	eax, 8
+	jb	$L1021
+$L1019:
+	mov	eax, dword ptr [esi+4]
+	mov	edx, dword ptr [esi+12]
+	shl	edx, 8
+	mov	cl, byte ptr [eax]
+	inc	eax
+	mov	byte ptr [esp+36-8], cl
+	mov	ecx, dword ptr [esi+8]
+	mov	dword ptr [esi+4], eax
+	mov	eax, dword ptr [esp+36-8]
+	and	eax, 0ffH
+	add	ecx, -8
+	or	edx, eax
+	mov	eax, ecx
+	cmp	eax, 8
+	mov	dword ptr [esi+12], edx
+	mov	dword ptr [esi+8], ecx
+	jae	$L1019
+$L1021:
+	mov	eax, dword ptr [esi+8]
+	mov	edi, dword ptr [esi+12]
+	mov	ecx, 8
+	sub	ecx, eax
+	add	eax, ebp
+	shr	edi, cl
+	mov	ecx, 24
+	mov	dword ptr [esi+8], eax
+	sub	ecx, ebp
+	and	edi, 0ffffffH
+	shr	edi, cl
+	lea	ecx, dword ptr [esi+304]
+	call	DecodeSymbol
+	add	eax, ebx
+	lea	ebx, dword ptr [eax+edi*8]
+	jmp	$L859
+$L858:
+	cmp	dword ptr [esi+8], 8
+	jb	$L1039
+$L1037:
+	mov	eax, dword ptr [esi+4]
+	mov	edx, dword ptr [esi+12]
+	shl	edx, 8
+	mov	cl, byte ptr [eax]
+	inc	eax
+	mov	byte ptr [esp+36-4], cl
+	mov	ecx, dword ptr [esi+8]
+	mov	dword ptr [esi+4], eax
+	mov	eax, dword ptr [esp+36-4]
+	and	eax, 0ffH
+	add	ecx, -8
+	or	edx, eax
+	mov	eax, ecx
+	cmp	eax, 8
+	mov	dword ptr [esi+12], edx
+	mov	dword ptr [esi+8], ecx
+	jae	$L1037
+$L1039:
+	mov	edx, dword ptr [esi+8]
+	mov	eax, dword ptr [esi+12]
+	mov	ecx, 8
+	sub	ecx, edx
+	add	edx, edi
+	shr	eax, cl
+	mov	ecx, 24
+	mov	dword ptr [esi+8], edx
+	sub	ecx, edi
+	and	eax, 0ffffffH
+	shr	eax, cl
+	add	ebx, eax
+$L859:
+	cmp	ebx, 3
+	jae	$L861
+	mov	ecx, dword ptr [esi+ebx*4+592]
+	test	ebx, ebx
+	je	$L863
+	mov	edx, dword ptr [esi+592]
+	mov	dword ptr [esi+ebx*4+592], edx
+	jmp	$L1069
+$L861:
+	mov	eax, dword ptr [esi+596]
+	mov	edx, dword ptr [esi+592]
+	lea	ecx, dword ptr [ebx-3]
+	mov	dword ptr [esi+600], eax
+	mov	dword ptr [esi+596], edx
+$L1069:
+	mov	dword ptr [esi+592], ecx
+$L863:
+	mov	eax, dword ptr [esi]
+	mov	edi, dword ptr [esp+36-16]
+	inc	ecx
+	lea	edx, dword ptr [eax+edi]
+	cmp	eax, edx
+	mov	dword ptr [esi], edx
+	jae	$L1048
+$L1046:
+	mov	edx, eax
+	sub	edx, ecx
+	inc	eax
+	mov	dl, byte ptr [edx]
+	mov	byte ptr [eax-1], dl
+	mov	edx, dword ptr [esi]
+	cmp	eax, edx
+	jb	$L1046
+$L1048:
+	mov	eax, dword ptr [esp+36-20]
+	add	eax, edi
+	mov	dword ptr [esp+36-20], eax
+	mov	edi, eax
+	jmp	$L865
+$L849:
+	mov	ecx, esi
+	call	ReadTables
+	test	al, al
+	je	$L1055
+$L865:
+	cmp	edi, dword ptr 8[esp+32]
+	jb	$L844
+	mov	eax, dword ptr 12[esp+32]
+	mov	dword ptr [eax], edi
+$L1068:
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	mov	al, 1
+	pop	rbx
+	add	esp, 20
+	ret	8
+$L1055:
+	pop	rdi
+	pop	rsi
+	pop	rbp
+	xor	al, al
+	pop	rbx
+	add	esp, 20
+	ret	8
+Decode endp
+
+END

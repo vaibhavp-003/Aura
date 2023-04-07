@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="WormScanner">
+      <UniqueIdentifier>{359809fc-b62e-4152-9a03-e9bedbab3c36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WormScanner\Header">
+      <UniqueIdentifier>{0025fe57-4b32-42f8-9926-dfce6666825a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WormScanner\Source">
+      <UniqueIdentifier>{e1a0e15b-baac-4419-94f3-24b89bd2e373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{3b4efd3b-accb-4183-9a10-9e266e0adb35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{94dac37d-7b57-4974-a091-1eb9a50cdb41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Database">
+      <UniqueIdentifier>{d68a591a-cb37-464a-9005-338480eaf18e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quarantine">
+      <UniqueIdentifier>{ae9dd048-05e8-48c3-a300-c731081c099e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BalBST">
+      <UniqueIdentifier>{36487cad-703b-4c61-aea1-9330315f1fb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PESignature">
+      <UniqueIdentifier>{39151563-06bb-49f6-a260-561b03c1f83e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Communication">
+      <UniqueIdentifier>{d9a51f85-6429-4604-ac5d-29b68dd43b4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MaxScanner">
+      <UniqueIdentifier>{8a870844-a248-448b-a2f8-739fdd4fbd53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SQLite">
+      <UniqueIdentifier>{5b573626-32ad-485e-9fe8-e19a6734aefc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Un7Zip">
+      <UniqueIdentifier>{28bfbcac-891a-42a2-b4a8-0a226b08bfcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\OptionTab\OptionTabFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecialSpyHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SplSpyScan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SplSpyWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\180Worm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\2ndThoughtWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AddGunWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AddSaverWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AdvancedSpy.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AdwarePopUps.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AecSys.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AntiMalware2009Worm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AntiSoldierWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AntiVirGear.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\Antivirus2009.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AntiVirusGoldenWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AuroraWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\AVXPWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\BaiduWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\BeyondeyloggerWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\BorlandWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\BustedWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\ChromePreference.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\CinmusWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\Cnsmin.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\CommonNameWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\CoolWebSearchWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\COSFiles.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\DialerPhoneAccess.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\DownloaderZlob.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\E2GiveWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\eAntivirusProWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\EliteKeyLogWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\ErrorSafeWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\FakeLivePCGuard.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\FakeMajorDefenceKit.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\FakeSecurityAlert.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\FraudTool.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\GenActiveSetup.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\GenAutorunInf.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\Generic Toolbar.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\GenericAppInitDllScanner.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\GenericScanner.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\GenHostScanner.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalRootFix.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\HeurScanWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\HotBarWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\HSAWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\IEBarWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\IEPluginWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\InfectedFiles.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\InternerOptWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\Invisible Keylogger.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\KeyKeyWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\KidoWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\LookToMe.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\LOPWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\LSPFixWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\MalwareBotWorms.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\MalwareCatcher.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\MalwareProtector.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\MSDirectDriver.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\NaviPromo.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\NewDotNetWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\PackedKrap.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\PalevoWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\PcClientWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\Poison.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\ProAgentWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\ProRatKWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\PSGuardWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\PurityScan.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\QuakeWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\RandomDrivers.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\RandomEntries.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\RandomInfectedFiles.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\RedHandedWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\RemotelyAny.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\RunEntryWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\ScapeGoatScan.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\Sdra64.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SmokingGunWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SpyAxeWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SpyBotWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SpyCrushWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SpyFalconWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SpyLockWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SpyStrikeWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SpywareGuard.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\StarWareWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SurfSideKickWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\SystemScan.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\TheLastDefender.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\ThinkPointWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\ToolBarCleaner.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\TrojanAgentWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\TrojanQQPassWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\TrojanZlobWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\VirusBlastWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\VirusBurstWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\VirusDoctor.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\VirusProtectWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\VirusShield.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WebHancerWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WebSerToolbarWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WinAntiSpyWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WinAntiVirusWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WinFixerWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WinFoundWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WininetKernel32Worm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WinWebSecurityWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\WinZipWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\XPCSpyWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\XPProWorm.cpp">
+      <Filter>WormScanner\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DBPathExpander.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\EnumProcess.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\Registry.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\FileOperation.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\GenericFileScanner.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\RemoteService.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\StringFunctions.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\VerInfo.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\FileSignatureDb.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\MaxDSrvWrapper.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\PathExpander.cpp">
+      <Filter>Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Quarantine\QuarantineFile.cpp">
+      <Filter>Quarantine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2O.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2U.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2U.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2OU2O.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2S.cpp">
+      <Filter>BalBST</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\FileSig.cpp">
+      <Filter>PESignature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\PESig.cpp">
+      <Filter>PESignature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\Signature.cpp">
+      <Filter>PESignature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.cpp">
+      <Filter>Communication</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.cpp">
+      <Filter>MaxScanner</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\DBWrapper.cpp">
+      <Filter>SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\sqlite3.c">
+      <Filter>SQLite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Un7Zip\C7zDLL.cpp">
+      <Filter>Un7Zip</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpecialSpyHandler.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\SpecialSpyHandler.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxConstant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\OptionTab\OptionTabFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\SDConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\SDSAConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecialSpyHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\SplSpyConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplSpyScan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SplSpyWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\180Worm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\2ndThoughtWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AddGunWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AddSaverWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AdvancedSpy.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AdwarePopUps.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AecSys.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AntiMalware2009Worm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AntiSoldierWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AntiVirGear.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\Antivirus2009.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AntiVirusGoldenWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AuroraWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\AVXPWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\BaiduWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\BeyondKeyloggerWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\BorlandWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\BustedWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\ChromePreference.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\CinmusWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\Cnsmin.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\CommonNameWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\CoolWebSearchWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\COSFiles.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\DialerPhoneAccess.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\DownloaderZlob.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\E2GiveWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\eAntivirusProWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\EliteKeyLogWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\ErrorSafeWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\FakeLivePCGuard.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\FakeMajorDefenceKit.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\FakeSecurityAlert.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\FraudTool.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\GenActiveSetup.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\GenAutorunInf.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\Generic Toolbar.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\GenericAppInitDllScanner.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\GenericScanner.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\GenHostScanner.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalRootFix.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\HeurScanWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\HotBarWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\HSAWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\IEBarWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\IEPluginWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\InfectedFiles.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\InternerOptWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\Invisible Keylogger.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\KeyKeyWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\KidoWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\LookToMe.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\LOPWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\LSPFixWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\MalwareBotWorms.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\MalwareCatcher.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\MalwareProtector.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\MSDirectDriver.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\NaviPromo.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\NewDotNetWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\PackedKrap.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\PalevoWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\PcClientWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\Poison.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\ProAgentWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\ProRatKWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\PSGuardWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\PurityScan.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\QuakeWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\RandomDrivers.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\RandomEntries.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\RandomInfectedFiles.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\RedHandedWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\RemotelyAny.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\RunEntryWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\ScapeGoatScan.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\Sdra64.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SmokingGunWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SpyAxeWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SpyBotWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SpyCrushWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SpyFalconWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SpyLockWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SpyStrikeWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SpywareGuard.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\StarWareWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SurfSideKickWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\SystemScan.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\TheLastDefender.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\ThinkPointWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\ToolBarCleaner.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\TrojanAgentWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\TrojanQQPassWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\TrojanZlobWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\VirusBlastWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\VirusBurstWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\VirusDoctor.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\VirusProtectWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\VirusShield.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WebHancerWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WebSerToolbarWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WinAntiSpyWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WinAntiVirusWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WinFixerWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WinFoundWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WininetKernel32Worm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WinWebSecurityWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\WinZipWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\XPCSpyWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\XPProWorm.h">
+      <Filter>WormScanner\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DBPathExpander.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Enumprocess.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Registry.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\FileOperation.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\GenericFileScanner.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\RemoteService.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\StringFunctions.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\VerInfo.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\FileSignatureDb.h">
+      <Filter>Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\MaxDSrvWrapper.h">
+      <Filter>Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\PathExpander.h">
+      <Filter>Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Quarantine\QuarantineFile.h">
+      <Filter>Quarantine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2O.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2U.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2U.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2OU2O.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2S.h">
+      <Filter>BalBST</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\PESignature\FileSig.h">
+      <Filter>PESignature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\PESignature\PESig.h">
+      <Filter>PESignature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.h">
+      <Filter>Communication</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.h">
+      <Filter>MaxScanner</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\DBWrapper.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="WormScanner\Header\sqlite3.h">
+      <Filter>SQLite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Un7Zip\C7zDLL.h">
+      <Filter>Un7Zip</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SpecialSpyHandler.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

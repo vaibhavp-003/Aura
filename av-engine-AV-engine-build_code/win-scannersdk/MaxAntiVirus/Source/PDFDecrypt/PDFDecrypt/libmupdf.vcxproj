@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5F615F91-DFF8-4F05-BF48-6222B7D86519}</ProjectGuid>
+    <RootNamespace>mupdf</RootNamespace>
+    <SccProjectName>"$/", AAAAAAAA</SccProjectName>
+    <SccLocalPath>..\..\..\..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.32002.118</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxAntiVirus\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Message>Generate CMap and Font source files</Message>
+      <Command>generate.bat</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\scripts;..\fitz;..\pdf;..\thirdparty\jbig2dec;..\thirdparty\jpeg-8c;..\thirdparty\openjpeg-1.4\libopenjpeg;..\thirdparty\zlib-1.2.5;..\thirdparty\freetype-2.4.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+      <Message>Generate CMap and Font source files</Message>
+      <Command>generate.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\scripts;..\fitz;..\pdf;..\thirdparty\jbig2dec;..\thirdparty\jpeg-8c;..\thirdparty\openjpeg-1.4\libopenjpeg;..\thirdparty\zlib-1.2.5;..\thirdparty\freetype-2.4.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Message>Generate CMap and Font source files</Message>
+      <Command>generate.bat</Command>
+    </PreBuildEvent>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\scripts;..\fitz;..\pdf;..\thirdparty\jbig2dec;..\thirdparty\jpeg-8c;..\thirdparty\openjpeg-1.4\libopenjpeg;..\thirdparty\zlib-1.2.5;..\thirdparty\freetype-2.4.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+      <Message>Generate CMap and Font source files</Message>
+      <Command>generate.bat</Command>
+    </PreBuildEvent>
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\scripts;..\fitz;..\pdf;..\thirdparty\jbig2dec;..\thirdparty\jpeg-8c;..\thirdparty\openjpeg-1.4\libopenjpeg;..\thirdparty\zlib-1.2.5;..\thirdparty\freetype-2.4.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\fitz\fitz.h" />
+    <ClInclude Include="..\pdf\mupdf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\draw\arch_port.c" />
+    <ClCompile Include="..\draw\draw_affine.c" />
+    <ClCompile Include="..\draw\draw_blend.c" />
+    <ClCompile Include="..\draw\draw_device.c" />
+    <ClCompile Include="..\draw\draw_edge.c" />
+    <ClCompile Include="..\draw\draw_glyph.c" />
+    <ClCompile Include="..\draw\draw_mesh.c" />
+    <ClCompile Include="..\draw\draw_paint.c" />
+    <ClCompile Include="..\draw\draw_path.c" />
+    <ClCompile Include="..\draw\draw_scale.c" />
+    <ClCompile Include="..\draw\draw_unpack.c" />
+    <ClCompile Include="..\fitz\base_error.c" />
+    <ClCompile Include="..\fitz\base_geometry.c" />
+    <ClCompile Include="..\fitz\base_getopt.c" />
+    <ClCompile Include="..\fitz\base_hash.c" />
+    <ClCompile Include="..\fitz\base_memory.c" />
+    <ClCompile Include="..\fitz\base_object.c" />
+    <ClCompile Include="..\fitz\base_string.c" />
+    <ClCompile Include="..\fitz\base_time.c" />
+    <ClCompile Include="..\fitz\crypt_aes.c" />
+    <ClCompile Include="..\fitz\crypt_arc4.c" />
+    <ClCompile Include="..\fitz\crypt_md5.c" />
+    <ClCompile Include="..\fitz\crypt_sha2.c" />
+    <ClCompile Include="..\fitz\dev_bbox.c" />
+    <ClCompile Include="..\fitz\dev_list.c" />
+    <ClCompile Include="..\fitz\dev_null.c" />
+    <ClCompile Include="..\fitz\dev_text.c" />
+    <ClCompile Include="..\fitz\dev_trace.c" />
+    <ClCompile Include="..\fitz\filt_basic.c" />
+    <ClCompile Include="..\fitz\filt_dctd.c" />
+    <ClCompile Include="..\fitz\filt_faxd.c" />
+    <ClCompile Include="..\fitz\filt_flate.c" />
+    <ClCompile Include="..\fitz\filt_jbig2d.c" />
+    <ClCompile Include="..\fitz\filt_jpxd.c" />
+    <ClCompile Include="..\fitz\filt_lzwd.c" />
+    <ClCompile Include="..\fitz\filt_predict.c" />
+    <ClCompile Include="..\fitz\obj_print.c" />
+    <ClCompile Include="..\fitz\res_bitmap.c" />
+    <ClCompile Include="..\fitz\res_colorspace.c" />
+    <ClCompile Include="..\fitz\res_font.c" />
+    <ClCompile Include="..\fitz\res_halftone.c" />
+    <ClCompile Include="..\fitz\res_path.c" />
+    <ClCompile Include="..\fitz\res_pixmap.c" />
+    <ClCompile Include="..\fitz\res_shade.c" />
+    <ClCompile Include="..\fitz\res_text.c" />
+    <ClCompile Include="..\fitz\stm_buffer.c" />
+    <ClCompile Include="..\fitz\stm_open.c" />
+    <ClCompile Include="..\fitz\stm_read.c" />
+    <ClCompile Include="..\pdf\pdf_annot.c" />
+    <ClCompile Include="..\pdf\pdf_cmap.c" />
+    <ClCompile Include="..\pdf\pdf_cmap_load.c" />
+    <ClCompile Include="..\pdf\pdf_cmap_parse.c" />
+    <ClCompile Include="..\pdf\pdf_cmap_table.c" />
+    <ClCompile Include="..\pdf\pdf_colorspace.c" />
+    <ClCompile Include="..\pdf\pdf_crypt.c" />
+    <ClCompile Include="..\pdf\pdf_encoding.c" />
+    <ClCompile Include="..\pdf\pdf_font.c" />
+    <ClCompile Include="..\pdf\pdf_fontfile.c" />
+    <ClCompile Include="..\pdf\pdf_function.c" />
+    <ClCompile Include="..\pdf\pdf_image.c" />
+    <ClCompile Include="..\pdf\pdf_interpret.c" />
+    <ClCompile Include="..\pdf\pdf_lex.c" />
+    <ClCompile Include="..\pdf\pdf_metrics.c" />
+    <ClCompile Include="..\pdf\pdf_nametree.c" />
+    <ClCompile Include="..\pdf\pdf_outline.c" />
+    <ClCompile Include="..\pdf\pdf_page.c" />
+    <ClCompile Include="..\pdf\pdf_parse.c" />
+    <ClCompile Include="..\pdf\pdf_pattern.c" />
+    <ClCompile Include="..\pdf\pdf_repair.c" />
+    <ClCompile Include="..\pdf\pdf_shade.c" />
+    <ClCompile Include="..\pdf\pdf_store.c" />
+    <ClCompile Include="..\pdf\pdf_stream.c" />
+    <ClCompile Include="..\pdf\pdf_type3.c" />
+    <ClCompile Include="..\pdf\pdf_unicode.c" />
+    <ClCompile Include="..\pdf\pdf_xobject.c" />
+    <ClCompile Include="..\pdf\pdf_xref.c" />
+    <ClCompile Include="..\xps\xps_common.c" />
+    <ClCompile Include="..\xps\xps_doc.c" />
+    <ClCompile Include="..\xps\xps_glyphs.c" />
+    <ClCompile Include="..\xps\xps_gradient.c" />
+    <ClCompile Include="..\xps\xps_image.c" />
+    <ClCompile Include="..\xps\xps_jpeg.c" />
+    <ClCompile Include="..\xps\xps_path.c" />
+    <ClCompile Include="..\xps\xps_png.c" />
+    <ClCompile Include="..\xps\xps_resource.c" />
+    <ClCompile Include="..\xps\xps_tiff.c" />
+    <ClCompile Include="..\xps\xps_tile.c" />
+    <ClCompile Include="..\xps\xps_util.c" />
+    <ClCompile Include="..\xps\xps_xml.c" />
+    <ClCompile Include="..\xps\xps_zip.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="libthirdparty.vcxproj">
+      <Project>{5edcf4fd-0291-4fb9-8d96-d58957ca5e3c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

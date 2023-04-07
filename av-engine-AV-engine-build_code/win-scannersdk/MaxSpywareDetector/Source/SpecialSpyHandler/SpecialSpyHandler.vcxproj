@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4668FC52-04EB-415A-A5C2-D5EB875430E5}</ProjectGuid>
+    <RootNamespace>SpecialSpyHandler</RootNamespace>
+    <SccProjectName>"$/", AAAAAAAA</SccProjectName>
+    <SccLocalPath>..\..\..</SccLocalPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <Keyword>MFCDLLProj</Keyword>
+    <ProjectName>AuSpecialSpyHandler</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.32002.118</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\MaxSpywareDetector\Output\$(Platform)\$(Configuration)\Intermediate\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\Header;.\WormScanner\Header;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\GUI;..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\Max Secure\Source\Common\Quarantine;..\..\..\Max Secure\Source\Common\Database;..\..\..\Max Secure\Source\Common\Communication;..\..\..\Max Secure\Source\Common\PESignature;..\..\Source\MaxScanner;..\..\..\Max Secure\Source\Common\MaxScanner;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\SpecialSpyHandler.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;.\Header;.\WormScanner\Header;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\GUI;..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\Max Secure\Source\Common\Quarantine;..\..\..\Max Secure\Source\Common\Database;..\..\..\Max Secure\Source\Common\Communication;..\..\..\Max Secure\Source\Common\PESignature;..\..\Source\MaxScanner;..\..\..\Max Secure\Source\Common\MaxScanner;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\SpecialSpyHandler.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\;.\Header;.\WormScanner\Header;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\GUI;..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\Max Secure\Source\Common\Quarantine;..\..\..\Max Secure\Source\Common\Database;..\..\..\Max Secure\Source\Common\Communication;..\..\..\Max Secure\Source\Common\PESignature;..\..\Source\MaxScanner;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\Max Secure\Source\Common\OptionTab;..\..\..\Max Secure\Source\Common\Un7Zip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;wininet.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll </OutputFile>
+      <ModuleDefinitionFile>.\SpecialSpyHandler.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\;.\Header;.\WormScanner\Header;..\..\..\Max Secure\Source\Common;..\..\..\Max Secure\Source\Common\BalBst;..\..\..\Max Secure\Source\Common\Utils;..\..\..\Max Secure\Source\Common\System;..\..\..\Max Secure\Source\Common\GUI;..\..\..\Max Secure\Source\ZipArchive\header;..\..\..\Max Secure\Source\Common\Quarantine;..\..\..\Max Secure\Source\Common\Database;..\..\..\Max Secure\Source\Common\Communication;..\..\..\Max Secure\Source\Common\PESignature;..\..\Source\MaxScanner;..\..\..\Max Secure\Source\Common\MaxScanner;..\..\..\Max Secure\Source\Common\OptionTab;..\..\..\Max Secure\Source\Common\Un7Zip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_WINDOWS;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>..\..\..\Max Secure\Output\$(Platform)\$(Configuration)\Binaries\ZipArchive.lib;shfolder.lib;wininet.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)Binaries\$(ProjectName).dll</OutputFile>
+      <ModuleDefinitionFile>.\SpecialSpyHandler.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)PDB\$(ProjectName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(IntDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2O.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2U.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2U.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2OU2O.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\BalBst\U2S.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\FileSignatureDb.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\MaxDSrvWrapper.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Database\PathExpander.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\OptionTab\OptionTabFunctions.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\FileSig.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\PESig.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\PESignature\Signature.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Quarantine\QuarantineFile.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DBPathExpander.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\EnumProcess.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\Registry.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Un7Zip\C7zDLL.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\FileOperation.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\GenericFileScanner.cpp" />
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\RemoteService.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\StringFunctions.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Max Secure\Source\Common\Utils\VerInfo.cpp" />
+    <ClCompile Include="GlobalRootFix.cpp" />
+    <ClCompile Include="SpecialSpyHandler.cpp" />
+    <ClCompile Include="SplSpyScan.cpp" />
+    <ClCompile Include="SplSpyWrapper.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\180Worm.cpp" />
+    <ClCompile Include="WormScanner\Source\2ndThoughtWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\AddGunWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\AddSaverWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\AdvancedSpy.cpp" />
+    <ClCompile Include="WormScanner\Source\AdwarePopUps.cpp" />
+    <ClCompile Include="WormScanner\Source\AecSys.cpp" />
+    <ClCompile Include="WormScanner\Source\AntiMalware2009Worm.cpp" />
+    <ClCompile Include="WormScanner\Source\AntiSoldierWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\AntiVirGear.cpp" />
+    <ClCompile Include="WormScanner\Source\Antivirus2009.cpp" />
+    <ClCompile Include="WormScanner\Source\AntiVirusGoldenWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\AuroraWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\AVXPWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\BaiduWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\BeyondeyloggerWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\BorlandWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\BustedWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\ChromePreference.cpp" />
+    <ClCompile Include="WormScanner\Source\CinmusWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\Cnsmin.cpp" />
+    <ClCompile Include="WormScanner\Source\CommonNameWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\CoolWebSearchWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\COSFiles.cpp" />
+    <ClCompile Include="WormScanner\Source\DBWrapper.cpp" />
+    <ClCompile Include="WormScanner\Source\DialerPhoneAccess.cpp" />
+    <ClCompile Include="WormScanner\Source\DownloaderZlob.cpp" />
+    <ClCompile Include="WormScanner\Source\E2GiveWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\eAntivirusProWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\EliteKeyLogWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\ErrorSafeWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\FakeLivePCGuard.cpp" />
+    <ClCompile Include="WormScanner\Source\FakeMajorDefenceKit.cpp" />
+    <ClCompile Include="WormScanner\Source\FakeSecurityAlert.cpp" />
+    <ClCompile Include="WormScanner\Source\FraudTool.cpp" />
+    <ClCompile Include="WormScanner\Source\GenActiveSetup.cpp" />
+    <ClCompile Include="WormScanner\Source\GenAutorunInf.cpp" />
+    <ClCompile Include="WormScanner\Source\Generic Toolbar.cpp" />
+    <ClCompile Include="WormScanner\Source\GenericAppInitDllScanner.cpp" />
+    <ClCompile Include="WormScanner\Source\GenericScanner.cpp" />
+    <ClCompile Include="WormScanner\Source\GenHostScanner.cpp" />
+    <ClCompile Include="WormScanner\Source\HeurScanWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\HotBarWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\HSAWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\IEBarWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\IEPluginWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\InfectedFiles.cpp" />
+    <ClCompile Include="WormScanner\Source\InternerOptWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\Invisible Keylogger.cpp" />
+    <ClCompile Include="WormScanner\Source\KeyKeyWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\KidoWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\LookToMe.cpp" />
+    <ClCompile Include="WormScanner\Source\LOPWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\LSPFixWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\MalwareBotWorms.cpp" />
+    <ClCompile Include="WormScanner\Source\MalwareCatcher.cpp" />
+    <ClCompile Include="WormScanner\Source\MalwareProtector.cpp" />
+    <ClCompile Include="WormScanner\Source\MSDirectDriver.cpp" />
+    <ClCompile Include="WormScanner\Source\NaviPromo.cpp" />
+    <ClCompile Include="WormScanner\Source\NewDotNetWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\PackedKrap.cpp" />
+    <ClCompile Include="WormScanner\Source\PalevoWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\PcClientWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\Poison.cpp" />
+    <ClCompile Include="WormScanner\Source\ProAgentWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\ProRatKWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\PSGuardWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\PurityScan.cpp" />
+    <ClCompile Include="WormScanner\Source\QuakeWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\RandomDrivers.cpp" />
+    <ClCompile Include="WormScanner\Source\RandomEntries.cpp" />
+    <ClCompile Include="WormScanner\Source\RandomInfectedFiles.cpp" />
+    <ClCompile Include="WormScanner\Source\RedHandedWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\RemotelyAny.cpp" />
+    <ClCompile Include="WormScanner\Source\RunEntryWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\ScapeGoatScan.cpp" />
+    <ClCompile Include="WormScanner\Source\Sdra64.cpp" />
+    <ClCompile Include="WormScanner\Source\SmokingGunWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SpyAxeWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SpyBotWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SpyCrushWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SpyFalconWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SpyLockWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SpyStrikeWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SpywareGuard.cpp" />
+    <ClCompile Include="WormScanner\Source\sqlite3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WormScanner\Source\StarWareWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SurfSideKickWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\SystemScan.cpp" />
+    <ClCompile Include="WormScanner\Source\TheLastDefender.cpp" />
+    <ClCompile Include="WormScanner\Source\ThinkPointWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\ToolBarCleaner.cpp" />
+    <ClCompile Include="WormScanner\Source\TrojanAgentWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\TrojanQQPassWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\TrojanZlobWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\VirusBlastWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\VirusBurstWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\VirusDoctor.cpp" />
+    <ClCompile Include="WormScanner\Source\VirusProtectWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\VirusShield.cpp" />
+    <ClCompile Include="WormScanner\Source\WebHancerWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\WebSerToolbarWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\WinAntiSpyWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\WinAntiVirusWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\WinFixerWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\WinFoundWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\WininetKernel32Worm.cpp" />
+    <ClCompile Include="WormScanner\Source\WinWebSecurityWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\WinZipWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\XPCSpyWorm.cpp" />
+    <ClCompile Include="WormScanner\Source\XPProWorm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\SpecialSpyHandler.rc2" />
+    <None Include="SpecialSpyHandler.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBST.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BalBSTOpt.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\BufferToStructure.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\PtrStack.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2O.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2OS2U.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2S.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\S2U.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2OS2U.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2OU2O.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\BalBst\U2S.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Communication\MaxCommunicator.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Constants.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\FileSignatureDb.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\MaxDSrvWrapper.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Database\PathExpander.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxConstant.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\MaxScanner\MaxPEFile.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\OptionTab\OptionTabFunctions.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\PESignature\FileSig.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\PESignature\PESig.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Quarantine\QuarantineFile.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\SDConstants.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\SDSAConstants.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\SplSpyConstants.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\CPUInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DBPathExpander.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\DirectoryManager.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Enumprocess.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\HardDiskManager.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\MaxExceptionFilter.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\ProductInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\Registry.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\System\SDSystemInfo.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Un7Zip\C7zDLL.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\BackupOperations.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\Cryptor.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\ExecuteProcess.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\FileOperation.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\GenericFileScanner.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\RemoteService.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\StringFunctions.h" />
+    <ClInclude Include="..\..\..\Max Secure\Source\Common\Utils\VerInfo.h" />
+    <ClInclude Include="GlobalRootFix.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SpecialSpyHandler.h" />
+    <ClInclude Include="SplSpyScan.h" />
+    <ClInclude Include="SplSpyWrapper.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="WormScanner\Header\180Worm.h" />
+    <ClInclude Include="WormScanner\Header\2ndThoughtWorm.h" />
+    <ClInclude Include="WormScanner\Header\AddGunWorm.h" />
+    <ClInclude Include="WormScanner\Header\AddSaverWorm.h" />
+    <ClInclude Include="WormScanner\Header\AdvancedSpy.h" />
+    <ClInclude Include="WormScanner\Header\AdwarePopUps.h" />
+    <ClInclude Include="WormScanner\Header\AecSys.h" />
+    <ClInclude Include="WormScanner\Header\AntiMalware2009Worm.h" />
+    <ClInclude Include="WormScanner\Header\AntiSoldierWorm.h" />
+    <ClInclude Include="WormScanner\Header\AntiVirGear.h" />
+    <ClInclude Include="WormScanner\Header\Antivirus2009.h" />
+    <ClInclude Include="WormScanner\Header\AntiVirusGoldenWorm.h" />
+    <ClInclude Include="WormScanner\Header\AuroraWorm.h" />
+    <ClInclude Include="WormScanner\Header\AVXPWorm.h" />
+    <ClInclude Include="WormScanner\Header\BaiduWorm.h" />
+    <ClInclude Include="WormScanner\Header\BeyondKeyloggerWorm.h" />
+    <ClInclude Include="WormScanner\Header\BorlandWorm.h" />
+    <ClInclude Include="WormScanner\Header\BustedWorm.h" />
+    <ClInclude Include="WormScanner\Header\ChromePreference.h" />
+    <ClInclude Include="WormScanner\Header\CinmusWorm.h" />
+    <ClInclude Include="WormScanner\Header\Cnsmin.h" />
+    <ClInclude Include="WormScanner\Header\CommonNameWorm.h" />
+    <ClInclude Include="WormScanner\Header\CoolWebSearchWorm.h" />
+    <ClInclude Include="WormScanner\Header\COSFiles.h" />
+    <ClInclude Include="WormScanner\Header\DBWrapper.h" />
+    <ClInclude Include="WormScanner\Header\DialerPhoneAccess.h" />
+    <ClInclude Include="WormScanner\Header\DownloaderZlob.h" />
+    <ClInclude Include="WormScanner\Header\E2GiveWorm.h" />
+    <ClInclude Include="WormScanner\Header\eAntivirusProWorm.h" />
+    <ClInclude Include="WormScanner\Header\EliteKeyLogWorm.h" />
+    <ClInclude Include="WormScanner\Header\ErrorSafeWorm.h" />
+    <ClInclude Include="WormScanner\Header\FakeLivePCGuard.h" />
+    <ClInclude Include="WormScanner\Header\FakeMajorDefenceKit.h" />
+    <ClInclude Include="WormScanner\Header\FakeSecurityAlert.h" />
+    <ClInclude Include="WormScanner\Header\FraudTool.h" />
+    <ClInclude Include="WormScanner\Header\GenActiveSetup.h" />
+    <ClInclude Include="WormScanner\Header\GenAutorunInf.h" />
+    <ClInclude Include="WormScanner\Header\Generic Toolbar.h" />
+    <ClInclude Include="WormScanner\Header\GenericAppInitDllScanner.h" />
+    <ClInclude Include="WormScanner\Header\GenericScanner.h" />
+    <ClInclude Include="WormScanner\Header\GenHostScanner.h" />
+    <ClInclude Include="WormScanner\Header\HeurScanWorm.h" />
+    <ClInclude Include="WormScanner\Header\HotBarWorm.h" />
+    <ClInclude Include="WormScanner\Header\HSAWorm.h" />
+    <ClInclude Include="WormScanner\Header\IEBarWorm.h" />
+    <ClInclude Include="WormScanner\Header\IEPluginWorm.h" />
+    <ClInclude Include="WormScanner\Header\InfectedFiles.h" />
+    <ClInclude Include="WormScanner\Header\InternerOptWorm.h" />
+    <ClInclude Include="WormScanner\Header\Invisible Keylogger.h" />
+    <ClInclude Include="WormScanner\Header\KeyKeyWorm.h" />
+    <ClInclude Include="WormScanner\Header\KidoWorm.h" />
+    <ClInclude Include="WormScanner\Header\LookToMe.h" />
+    <ClInclude Include="WormScanner\Header\LOPWorm.h" />
+    <ClInclude Include="WormScanner\Header\LSPFixWorm.h" />
+    <ClInclude Include="WormScanner\Header\MalwareBotWorms.h" />
+    <ClInclude Include="WormScanner\Header\MalwareCatcher.h" />
+    <ClInclude Include="WormScanner\Header\MalwareProtector.h" />
+    <ClInclude Include="WormScanner\Header\MSDirectDriver.h" />
+    <ClInclude Include="WormScanner\Header\NaviPromo.h" />
+    <ClInclude Include="WormScanner\Header\NewDotNetWorm.h" />
+    <ClInclude Include="WormScanner\Header\PackedKrap.h" />
+    <ClInclude Include="WormScanner\Header\PalevoWorm.h" />
+    <ClInclude Include="WormScanner\Header\PcClientWorm.h" />
+    <ClInclude Include="WormScanner\Header\Poison.h" />
+    <ClInclude Include="WormScanner\Header\ProAgentWorm.h" />
+    <ClInclude Include="WormScanner\Header\ProRatKWorm.h" />
+    <ClInclude Include="WormScanner\Header\PSGuardWorm.h" />
+    <ClInclude Include="WormScanner\Header\PurityScan.h" />
+    <ClInclude Include="WormScanner\Header\QuakeWorm.h" />
+    <ClInclude Include="WormScanner\Header\RandomDrivers.h" />
+    <ClInclude Include="WormScanner\Header\RandomEntries.h" />
+    <ClInclude Include="WormScanner\Header\RandomInfectedFiles.h" />
+    <ClInclude Include="WormScanner\Header\RedHandedWorm.h" />
+    <ClInclude Include="WormScanner\Header\RemotelyAny.h" />
+    <ClInclude Include="WormScanner\Header\RunEntryWorm.h" />
+    <ClInclude Include="WormScanner\Header\ScapeGoatScan.h" />
+    <ClInclude Include="WormScanner\Header\Sdra64.h" />
+    <ClInclude Include="WormScanner\Header\SmokingGunWorm.h" />
+    <ClInclude Include="WormScanner\Header\SpyAxeWorm.h" />
+    <ClInclude Include="WormScanner\Header\SpyBotWorm.h" />
+    <ClInclude Include="WormScanner\Header\SpyCrushWorm.h" />
+    <ClInclude Include="WormScanner\Header\SpyFalconWorm.h" />
+    <ClInclude Include="WormScanner\Header\SpyLockWorm.h" />
+    <ClInclude Include="WormScanner\Header\SpyStrikeWorm.h" />
+    <ClInclude Include="WormScanner\Header\SpywareGuard.h" />
+    <ClInclude Include="WormScanner\Header\sqlite3.h" />
+    <ClInclude Include="WormScanner\Header\StarWareWorm.h" />
+    <ClInclude Include="WormScanner\Header\SurfSideKickWorm.h" />
+    <ClInclude Include="WormScanner\Header\SystemScan.h" />
+    <ClInclude Include="WormScanner\Header\TheLastDefender.h" />
+    <ClInclude Include="WormScanner\Header\ThinkPointWorm.h" />
+    <ClInclude Include="WormScanner\Header\ToolBarCleaner.h" />
+    <ClInclude Include="WormScanner\Header\TrojanAgentWorm.h" />
+    <ClInclude Include="WormScanner\Header\TrojanQQPassWorm.h" />
+    <ClInclude Include="WormScanner\Header\TrojanZlobWorm.h" />
+    <ClInclude Include="WormScanner\Header\VirusBlastWorm.h" />
+    <ClInclude Include="WormScanner\Header\VirusBurstWorm.h" />
+    <ClInclude Include="WormScanner\Header\VirusDoctor.h" />
+    <ClInclude Include="WormScanner\Header\VirusProtectWorm.h" />
+    <ClInclude Include="WormScanner\Header\VirusShield.h" />
+    <ClInclude Include="WormScanner\Header\WebHancerWorm.h" />
+    <ClInclude Include="WormScanner\Header\WebSerToolbarWorm.h" />
+    <ClInclude Include="WormScanner\Header\WinAntiSpyWorm.h" />
+    <ClInclude Include="WormScanner\Header\WinAntiVirusWorm.h" />
+    <ClInclude Include="WormScanner\Header\WinFixerWorm.h" />
+    <ClInclude Include="WormScanner\Header\WinFoundWorm.h" />
+    <ClInclude Include="WormScanner\Header\WininetKernel32Worm.h" />
+    <ClInclude Include="WormScanner\Header\WinWebSecurityWorm.h" />
+    <ClInclude Include="WormScanner\Header\WinZipWorm.h" />
+    <ClInclude Include="WormScanner\Header\XPCSpyWorm.h" />
+    <ClInclude Include="WormScanner\Header\XPProWorm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SpecialSpyHandler.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

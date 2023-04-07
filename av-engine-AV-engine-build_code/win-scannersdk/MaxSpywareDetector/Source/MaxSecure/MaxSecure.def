@@ -1,0 +1,6 @@
+; MaxSecure.def : Declares the module parameters for the DLL.
+
+LIBRARY      "MaxSecure"
+
+EXPORTS
+    ; Explicit exports can go here

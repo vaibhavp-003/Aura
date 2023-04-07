@@ -1,0 +1,6 @@
+; SDScanner.def : Declares the module parameters for the DLL.
+
+LIBRARY      "AuCoreScanner"
+
+EXPORTS
+    ; Explicit exports can go here

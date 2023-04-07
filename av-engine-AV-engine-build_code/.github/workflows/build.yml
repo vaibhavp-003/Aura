@@ -1,0 +1,45 @@
+name: Build AV Engine
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Target (Debug, Release)'
+        required: true
+        default: 'Release'
+
+env:
+  BUILD_CONFIGURATION: ${{ github.event.inputs.target }}
+
+jobs:
+  build-upx:
+    name: Build upx-3.95-WithDependancy.sln
+    runs-on: windows-2019
+    strategy:
+      matrix:
+        include:
+          - platform: 'x64'
+            output: ${{ github.workspace }}\MaxUPXUnpacker_X64_File\UPX-Visual-Studio-master\x64\${{ env.BUILD_CONFIGURATION }}
+          - platform: 'x86'
+            output: ${{ github.workspace }}\MaxUPXUnpacker_X64_File\UPX-Visual-Studio-master\${{ env.BUILD_CONFIGURATION }}
+
+    env:
+      SLN_PATH: ${{ github.workspace }}\MaxUPXUnpacker_X64_File\UPX-Visual-Studio-master\upx-3.95-WithDependancy.sln
+      PLATFORM: ${{ matrix.platform }}
+      OUTPUT: ${{ matrix.output }}
+
+    steps:
+    # Checkout repository
+    - uses: actions/checkout@v3
+
+    # Run build
+    - name: Build
+      shell: powershell
+      run: |
+        ${{ github.workspace }}\win-scannersdk\build.ps1 ${{ env.SLN_PATH }} ${{ env.BUILD_CONFIGURATION }} ${{ env.PLATFORM }}
+
+    # Upload artifacts
+    - uses: actions/upload-artifact@v3
+      with:
+        name: upx-3.95-${{ env.PLATFORM }}
+        path: ${{ env.OUTPUT }}\*.*

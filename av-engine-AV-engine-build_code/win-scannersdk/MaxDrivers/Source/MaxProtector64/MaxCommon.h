@@ -1,0 +1,97 @@
+#pragma once
+#include <fltKernel.h>
+#include <wdm.h>
+#include <dontuse.h>
+#include <suppress.h>
+#include <ntstrsafe.h>
+
+/*
+#define MAX_PATH 1024
+#define BLOCKTROJAN_POOL_POOL_TAG 'BTP'
+#define MAXPROTECTOR_POOL_POOL_TAG	'MAX'
+
+//Required Structure
+typedef NTSTATUS(*QUERY_INFO_PROCESS)(
+	__in HANDLE ProcessHandle,
+	__in PROCESSINFOCLASS ProcessInformationClass,
+	__out_bcount(ProcessInformationLength) PVOID ProcessInformation,
+	__in ULONG ProcessInformationLength,
+	__out_opt PULONG ReturnLength
+	);
+QUERY_INFO_PROCESS ZwQueryInformationProcess;
+
+BOOLEAN bProtectSystemRegistry = FALSE;
+BOOLEAN bRestrictUSBWrite;
+BOOLEAN bRestrictUSBExecute;
+BOOLEAN USB_TOTAL_BLOCK[26];
+BOOLEAN USB_WRITE_BLOCK[26];
+BOOLEAN USB_EXECUTE_BLOCK[26];
+
+const static UNICODE_STRING BACKSLASH = RTL_CONSTANT_STRING(L"\\");
+
+static UNICODE_STRING USB_DRIVE_LETTER = RTL_CONSTANT_STRING(L"*X:\\*");
+static UNICODE_STRING USB_WRITE_REG_VALUE = RTL_CONSTANT_STRING(L"BLOCKUSBWRITE");
+static UNICODE_STRING USB_EXECUTE_REG_VALUE = RTL_CONSTANT_STRING(L"BLOCKUSBEXECUTE");
+
+static UNICODE_STRING AUTORUN_REG_VALUE = RTL_CONSTANT_STRING(L"BLOCKAUTORUN");
+static UNICODE_STRING PROTECT_SYS_REG_VALUE = RTL_CONSTANT_STRING(L"ProtectSystemRegistry");
+
+
+BOOLEAN ShouldWeBlock(PUNICODE_STRING pusRegistryPath, const PUNICODE_STRING pusValueName);
+
+void ResetAllDrivesProtection();
+
+
+
+const ULONG CALL_TYPE_UNKNOWN = 0;
+const ULONG CALL_TYPE_F_EXECUTE = 1;
+const ULONG CALL_TYPE_F_CREATE = 2;
+const ULONG CALL_TYPE_F_OPEN = 3;
+const ULONG CALL_TYPE_F_DELETE = 4;
+const ULONG CALL_TYPE_F_RENAME = 5;
+const ULONG CALL_TYPE_R_CREATE = 6;
+const ULONG CALL_TYPE_R_OPEN = 7;
+const ULONG CALL_TYPE_R_DELETE = 8;
+const ULONG CALL_TYPE_R_RENAME = 9;
+const ULONG CALL_TYPE_R_SETVAL = 10;
+const ULONG CALL_TYPE_R_DELETEVAL = 11;
+const ULONG CALL_TYPE_D_CREATE = 12;
+const ULONG CALL_TYPE_F_NEW_FILE = 13;
+const ULONG CALL_TYPE_F_NEW_SYS_FILE = 14;
+const ULONG CALL_TYPE_F_REN_SYS_FILE = 15;
+const ULONG CALL_TYPE_F_DEL_SYS_FILE = 16;
+const ULONG CALL_TYPE_F_MOD_SYS_FILE = 17;
+const ULONG CALL_TYPE_F_KIDO_FILE = 18;
+const ULONG CALL_TYPE_F_REPLICATING = 19;
+const ULONG CALL_TYPE_F_R_BLOCK = 20;
+const ULONG CALL_TYPE_C_CREATE = 21;
+const ULONG CALL_TYPE_U_CREATE = 22;
+const ULONG CALL_TYPE_U_WRITE = 23;
+const ULONG CALL_TYPE_U_EXECUTE = 24;
+const ULONG CALL_TYPE_N_CREATE = 25;
+const ULONG CALL_TYPE_FIM_DELETE = 26;
+const ULONG CALL_TYPE_FIM_RENAME = 27;
+const ULONG CALL_TYPE_FIM_MODIFY = 28;
+const ULONG CALL_TYPE_FIM_CREATE = 29;
+
+
+BOOLEAN MatchUnicodeString(UNICODE_STRING const* pusLeftString, UNICODE_STRING const* pusRightString);
+BOOLEAN MatchWCHARString(int iwLen, PWCHAR w, int isLen, PWCHAR s);
+USHORT	GetMaxLen(PUNICODE_STRING pStr);
+
+BOOLEAN		GetImageNameByID(HANDLE ProcessId, PUNICODE_STRING pusImageFileName);
+NTSTATUS	GetProcessImageName(HANDLE ProcessHandle, PUNICODE_STRING ProcessImageName);
+BOOLEAN		IsOurProcessFile(PUNICODE_STRING ProcessPath);
+BOOLEAN		IsProtectedFile(PUNICODE_STRING ParentFolderPath, PUNICODE_STRING FileBeingAccessed);
+
+BOOLEAN		IsWriteCall(__inout PFLT_CALLBACK_DATA Data);
+
+
+int		CheckIfProtectedRegistry(PUNICODE_STRING RegistryBeingAccessed);
+BOOLEAN IsProtectedRegistry(PUNICODE_STRING ParentRegistryPath, PUNICODE_STRING RegistryPath);
+
+POBJECT_NAME_INFORMATION GetObjectCompleteName(PVOID pObject);
+BOOLEAN IsWOW64RegFile(PUNICODE_STRING FileBeingAccessed);
+
+BOOLEAN BlockUSBFileAccess(PUNICODE_STRING FileBeingAccessed, BOOLEAN bOpenForExecute, BOOLEAN bOpenForWrite);
+*/
